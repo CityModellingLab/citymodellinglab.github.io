@@ -1,10 +1,8 @@
 # Configuration of Hugo
 # Guide: https://docs.hugoblox.com/tutorial/
-# Hugo Documentation: https://gohugo.io/getting-started/configuration/#all-configuration-settings
-# This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
-title: Wowchemy Research Group # Website name
-baseURL: 'https://example.com/' # Website URL
+title: 'City Modelling Lab' # Website name
+baseURL: 'https://www.citymodellinglab.uk/' # Website URL
 
 ############################
 ## LANGUAGE
@@ -18,7 +16,6 @@ removePathAccents: true
 ############################
 ## ADVANCED
 ############################
-
 enableGitInfo: false
 summaryLength: 30
 pagination:
@@ -26,7 +23,7 @@ pagination:
 enableEmoji: true
 enableRobotsTXT: true
 footnotereturnlinkcontents: <sup>^</sup>
-ignoreFiles: [\.ipynb$, .ipynb_checkpoints$, \.Rmd$, \.Rmarkdown$, _cache$]
+ignoreFiles: [\.ipynb$, .ipynb_checkpoints$, \.Rmd$, \.Rmarkdown$, _cache$ , \.qmd$, \.ipynb$, \.py$]
 permalinks:
   authors: '/author/:slug/'
   tags: '/tag/:slug/'
@@ -37,16 +34,17 @@ outputs:
   home: [HTML, RSS, JSON, WebAppManifest, headers, redirects]
   section: [HTML, RSS]
 imaging:
-  resampleFilter: lanczos
+  resampleFilter: Lanczos
   quality: 75
-  anchor: smart
-timeout: 600000
+  anchor: Smart
+timeout: '30s'
 taxonomies:
   tag: tags
   category: categories
   publication_type: publication_types
   author: authors
 markup:
+  defaultMarkdownHandler: goldmark
   _merge: deep
 related:
   threshold: 80

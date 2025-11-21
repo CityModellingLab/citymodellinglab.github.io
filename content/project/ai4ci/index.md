@@ -1,0 +1,33 @@
+---
+title: "Artificial Intelligence for Collective Intelligence (AI4CI) - Smart Cities"
+date: 2024-10-01
+type: landing
+
+sections:
+  - block: markdown
+    content:
+      text: "
+      [![](featured.jpg)]()
+      ## Aims and Objectives
+
+      To address society’s most pressing challenges we must be able to reliably engineer important new kinds of Collective Intelligence:
+
+      *Connected communities of people, devices, data and software collaboratively sensing and interacting in real-time to achieve positive outcomes at multiple scales.*
+
+      New AI methods and technologies are central to meeting this challenge. The AI4CI Hub combines AI expertise with excellence in key application domains in a strongly integrated national consortium of leading UK universities working with dozens of non-academic partners from across government, industry and civil society.
+
+      ## Smart Cities
+
+      The Smart Cities 'spoke' of the national hub is a joint effort between UCL CASA and the University of Glasgow. Starting in September 2024, we will be looking to explore how AI methods can be used in an Urban Planning Context, exploring planning applications data from [the Planning London Datahub](https://www.london.gov.uk/programmes-strategies/planning/digital-planning/planning-london-datahub) and urban transport models, building on the activity based MATSIM models developed in the [Arup City Modelling Lab](https://medium.com/arupcitymodelling).
+
+      ## Funder
+
+      UKRI
+
+      [![AI4CI](AI4CI.png)](https://ai4ci.ac.uk/)
+      "
+---
+
+A new research hub to address society’s most pressing challenges we need new kinds of Collective Intelligence.
+
+<!--more-->

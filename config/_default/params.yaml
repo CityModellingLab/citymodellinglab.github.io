@@ -1,72 +1,60 @@
 # SITE SETUP
-# Guide: https://docs.hugoblox.com/tutorial/
-# Documentation: https://docs.hugoblox.com/
-# This file is formatted using YAML syntax - learn more at https://learnxinyminutes.com/docs/yaml/
 
 # Appearance
-
 appearance:
   theme_day: minimal
-  theme_night:
-  font: native
-  font_size: L
+  font: Cyberpunk
+  font_size: XL
 
 # SEO
-
 marketing:
   seo:
     site_type: Organization
     local_business_type: ''
-    org_name: ''
-    description: 'A highly-customizable Hugo research group theme powered by Wowchemy website builder.'
-    twitter: 'GetResearchDev'
+    org_name: 'City Modelling Lab'
+    description: 'The City Modelling Lab is a collaboration between the University College London, Arup and the University of Zürich to foster innovations that better enable city decision makers to make the changes required to tackle pressing global challenges such as social inequality and climate change.'
+    twitter: ''
   analytics:
     google_analytics: ''
-    baidu_tongji: ''
     google_tag_manager: ''
     microsoft_clarity: ''
   verification:
     google: ''
-    baidu: ''
 
 # Site header
-
 header:
   navbar:
     enable: true
     align: r
-    show_logo: true
     show_language: false
-    show_day_night: true
+    show_day_night: false
     show_search: true
     highlight_active_link: false
 
 # Site footer
-
 footer:
   copyright:
-    notice: '© {year} Me. This work is licensed under {license}'
+    notice: 'Copyright {year} City Modelling Lab. All rights reserved.'
     license:
       enable: true
       allow_derivatives: false
-      share_alike: true
+      share_alike: false
       allow_commercial: false
-
+  
 # Localization
-
 locale:
   date_format: 'Jan 2, 2006'
   time_format: '3:04 PM'
-  address_format: en-us
+  address_format: en-gb
 
 # Site features
-
 features:
   syntax_highlighter:
     enable: false
     extra_languages:
       - r
       - latex
+      - python
   math:
     enable: false
   privacy_pack:
@@ -92,13 +80,8 @@ features:
       category_id: ''
   search:
     provider: wowchemy
-    algolia:
-      app_id: ''
-      api_key: ''
-      index_name: ''
-      show_logo: false
   map:
-    provider: 'mapnik'
+    provider: 'openstreetmap'
     api_key: ''
     zoom: 15
 
