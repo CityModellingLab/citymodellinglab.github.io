@@ -1,6 +1,6 @@
 ---
 title: "Department for Transport - National Trip End Model Synthetic Population"
-date: 2024-10-01
+show_date: false
 type: landing
 
 sections:

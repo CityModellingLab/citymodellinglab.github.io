@@ -1,6 +1,6 @@
 ---
 title: "Artificial Intelligence for Collective Intelligence (AI4CI) - Smart Cities"
-date: 2024-10-01
+show_date: false
 type: landing
 
 sections:

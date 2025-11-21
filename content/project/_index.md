@@ -1,11 +1,15 @@
 ---
-title: Latest Projects
-
-# Listing view
-view: card
-
-# Optional banner image (relative to `assets/media/` folder).
-banner:
-  caption: ''
-  image: ''
+title: 
+type: landing
+sections:
+  - block: portfolio
+    content:
+      title: Project Highlights
+      subtitle: What we're currently working on...
+      filters:
+        folders:
+          - project
+    design:
+      columns: '2'
+      view: card
 ---
