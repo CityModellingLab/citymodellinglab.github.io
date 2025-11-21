@@ -4,7 +4,7 @@ type: landing
 sections:
   - block: portfolio
     content:
-      title: Project Highlights
+      title: Top Projects
       subtitle: What we're currently working on...
       filters:
         folders:
