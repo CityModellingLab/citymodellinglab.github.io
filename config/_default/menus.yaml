@@ -4,21 +4,22 @@
 #   The weight parameter defines the order that the links will appear in.
 
 main:
-  - name: Mission # About
-    url: mission
-    weight: 10
+
   - name: People
     url: people
-    weight: 20
-  - name: Projects # Main project
+    weight: 10
+  - name: Projects
     url: project
-    weight: 30
-  - name: Blog # Update regularly
-    url: blog
-    weight: 40
+    weight: 20
   - name: Publications 
     url: publication
+    weight: 30
+  - name: Blog
+    url: blog
+    weight: 40
+  - name: Mission
+    url: mission
     weight: 50
-  - name: Contact # ASK FOR CONTENT
+  - name: Contact
     url: contact
     weight: 60

@@ -7,10 +7,10 @@ sections:
   - block: hero
     content:
       title: |
-        Welcome to the CASA / Arup City Modelling Lab
+        Welcome to the City Modelling Lab
       text: |
         <br>
-        Here at the City Modelling Lab we take some of the most pressing and complex challenges facing cities such as social inequality and climate change and develop methods, data and tools to enable decision makers to tackle them.
+        We take some of the most pressing and complex challenges facing cities such as social inequality and climate change and develop methods, data and tools to enable decision makers to tackle them
         <br>
 
     design:
