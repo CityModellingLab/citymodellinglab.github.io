@@ -1,8 +1,8 @@
 # SITE SETUP
 # Appearance
 appearance:
-  theme_day: cyberpunk
-  theme_night: cyberpunk
+  theme_day: 'minimal'
+  theme_night: 'dark'
   font: cyberpunk
   font_size: L
 
