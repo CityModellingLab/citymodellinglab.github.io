@@ -19,7 +19,7 @@ sections:
           filters:
             brightness: '0.5'
         text_color_light: true
-        color: '#333'
+        color: '#700000ff'
         
   - block: markdown
     content:

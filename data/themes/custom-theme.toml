@@ -1,0 +1,37 @@
+name = "Custom Theme"
+
+[light]
+  # Main accent color (Darker Red)
+  primary = "#b30000"
+
+  # Navigation Bar Background
+  menu_primary = "#000000"
+
+  # Navigation Text Color (Links)
+  menu_text = "#ffffff"
+
+  # Navigation Title Color (The Logo Text)
+  menu_title = "#ffffff"
+
+  # Navigation Hover Color (Darker Red)
+  menu_text_active = "#b30000"
+
+  # Backgrounds
+  background = "#ffffff"
+  home_section_odd = "#ffffff"
+  home_section_even = "#f8f9fa"
+
+[dark]
+  # Darker Red for Dark Mode
+  primary = "#b30000"
+  
+  menu_primary = "#121212"
+  menu_text = "#ffffff"
+  menu_title = "#ffffff"
+  
+  # Darker Red Hover
+  menu_text_active = "#b30000"
+  
+  background = "#121212"
+  home_section_odd = "#121212"
+  home_section_even = "#181818"
