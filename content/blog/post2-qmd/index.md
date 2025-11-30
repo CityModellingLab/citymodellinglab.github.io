@@ -24,7 +24,7 @@ url_slides: ''
 url_video: 'https://www.youtube.com/watch?v=-2xD3C03HvI'
 ---
 
-<iframe id="quarto-report" src="/blog/post2-qmd/index_prerendered.html" width="100%" style="border:none; width: 100%; display: block;" scrolling="no"></iframe>
+<iframe id="quarto-report" src="/cml-site/blog/post2-qmd/index_prerendered.html" width="100%" style="border:none; width: 100%; display: block;" scrolling="no"></iframe>
 
 <script>
   (function() {

@@ -11,6 +11,8 @@ from pathlib import Path
 
 CONTENT_DIR = Path("content")
 STATIC_DIR = Path("static")
+FORCE_BASE_URL = "/cml-site"  # Only in developpment 
+# FORCE_BASE_URL = "" # Use when moved to citymodellinglab.uk
 
 # Template for the Hugo Markdown wrapper
 WRAPPER_TEMPLATE = """---
@@ -203,7 +205,7 @@ def process_file(html_file_str: str):
 
     # 5. Generate Wrapper
     # Iframe src: /blog/my-post/index_prerendered.html
-    iframe_src = f"/{rel_path.as_posix()}/index_prerendered.html"
+    iframe_src = f"{FORCE_BASE_URL}/{rel_path.as_posix()}/index_prerendered.html"
     create_hugo_wrapper(html_path.with_name("index.md"), iframe_src, parse_front_matter(source_file))
 
 if __name__ == "__main__":
