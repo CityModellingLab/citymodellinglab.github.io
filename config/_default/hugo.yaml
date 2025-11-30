@@ -1,5 +1,5 @@
 title: 'City Modelling Lab' # Website name
-baseURL: 'https://www.citymodellinglab.uk/' # Website URL
+baseURL: 'https://shaunhoang.github.io/' # Website URL
 cascade:
   - params:
       share: false
