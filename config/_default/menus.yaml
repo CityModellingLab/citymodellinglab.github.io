@@ -2,13 +2,13 @@
 main:
   - name: Projects
     url: project
-    weight: 10
+    weight: 20
   - name: Blog
     url: blog
-    weight: 20
+    weight: 30
   - name: Publications 
     url: publication
-    weight: 30
-  - name: About
-    url: people
     weight: 40
+  - name: People
+    url: people
+    weight: 10
