@@ -62,4 +62,5 @@ user_groups:
   - Meet the team
 ---
 
+<!-- Long bio -->
 Since his CASA debut in 2010, Adam has risen to the rank of Professor of Urban Analytics. Despite a fondness for body art and drum and bass music, he still manages to hold it down on the mapping and modelling front.
