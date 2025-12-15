@@ -98,14 +98,14 @@ Blog posts are in markdown format. For blogposts with executable codes, render `
 
 ## 3. Adding members and projects
 
-Make a copy of an existing folder under `project\` or `authors\` and make an desired changes for the new team member / project. Note that the folder's name is important and is how the new project or person can be connected with other resources like blog posts and publications. 
+Make a copy of an existing folder under `content/project/` or `content/authors/` and make an desired changes for the new team member / project. Note that the folder's name is important and is how the new project or person can be connected with other resources like blog posts and publications. 
 
 For consistency, the naming conventions are:
-- Project: single string (e.g., `project\space-syntax-urban-morph\`)
-- People: full name as would appear on publications (e.g., `authors\Sherlock Holmes\`)
+- Project: single string (e.g., `../project/space-syntax-urban-morph/`)
+- People: full name as would appear on publications (e.g., `../authors/Sherlock Holmes/`)
 
 ## 4. Updating publications
 
-1. Under `data\`, update `publications.bib` following the BibTex format. Make sure CML authors' names are consistent with their names `authors\`.
+1. Under `data/`, update `publications.bib` following the BibTex format. Make sure CML authors' names are consistent with their names `content/authors/`.
 2. Commit and push this change to GitHub
 3. The Publications page and linkages to people will be automatically updated on the website.
