@@ -32,10 +32,21 @@ jobs:
           python -m pip install --upgrade pip
           pip install academic==0.10.0
       - name: Run Academic (Bibtex To Markdown Converter)
-        # Check `.bib` file exists for case when action runs on `.bib` deletion
-        # Note GH only provides hashFiles func in `steps.if` context, not `jobs.if` context
         if: ${{ hashFiles('publications.bib') != '' }}
         run: academic import publications.bib content/publication/ --compact --overwrite
+      - name: Commit and push changes
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add content/publication
+          if ! git diff --staged --quiet; then
+            git commit -m "content: import publications from Bibtex"
+            git push origin HEAD:${GITHUB_REF}
+          else
+            echo "No changes to commit"
+          fi
+
+
       # - name: Create Pull Request
       #   # Set ID for `Check outputs` stage
       #   id: cpr
@@ -55,14 +66,3 @@ jobs:
       #   run: |
       #     echo "Pull Request Number - ${{ steps.cpr.outputs.pull-request-number }}"
       #     echo "Pull Request URL - ${{ steps.cpr.outputs.pull-request-url }}"
-      - name: Commit and push changes
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
-          git add content/publication
-          if ! git diff --staged --quiet; then
-            git commit -m "content: import publications from Bibtex"
-            git push origin HEAD:${GITHUB_REF}
-          else
-            echo "No changes to commit"
-          fi
