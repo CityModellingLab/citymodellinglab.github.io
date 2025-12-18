@@ -13,7 +13,7 @@ sections:
     design:
       background:
         image: 
-          filename: 'welcome.jpg'
+          filename: 'ai4ci-welcome.png'
           filters:
             brightness: '0.5'
         text_color_light: true
