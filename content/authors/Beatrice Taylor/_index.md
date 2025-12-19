@@ -10,7 +10,7 @@ last_name: Taylor
 superuser: false
 
 # Role/position
-role: Research Fellow in Artificial Intelligence for Collective Intelligence – Smart Cities
+role: Research Fellow
 
 # Organizations/Affiliations
 organizations:

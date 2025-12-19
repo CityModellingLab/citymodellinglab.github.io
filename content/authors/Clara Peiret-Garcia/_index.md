@@ -10,7 +10,7 @@ last_name: Peiret-Garcia
 superuser: false
 
 # Role/position
-role: Research Fellow in Urban Analytics
+role: Research Fellow
 
 # Organizations/Affiliations
 organizations:

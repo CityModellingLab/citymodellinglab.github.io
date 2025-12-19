@@ -10,7 +10,7 @@ last_name: Hoang
 superuser: false
 
 # Role/position
-role: Research Assistant in Urban Analytics
+role: Research Assistant
 
 # Organizations/Affiliations
 organizations:
