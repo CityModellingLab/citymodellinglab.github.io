@@ -10,20 +10,15 @@ last_name: Peiret-Garcia
 superuser: false
 
 # Role/position
-role: Research Fellow
-
-# Organizations/Affiliations
-organizations:
-  - name: Bartlett Centre for Advanced Spatial Analysis, University College London
-    url: 'https://www.ucl.ac.uk/bartlett/casa'
+role: Research Fellow, UCL
 
 # Short bio (displayed in user profile at end of posts)
-bio: Clara joined CASA as a postdoc in January 2025. Her research focuses in identifying spatial inequalities in transport, and developing and applying new methods based using survey data. She is very partial to pretty maps and Bruce Springsteen.
+bio: I research human mobility patterns and how people navigate cities in different ways. My work focuses on understanding diversity in travel and activity behaviors.Clara joined CASA as a postdoc in January 2025. Her research focuses in identifying spatial inequalities in transport, and developing and applying new methods based using survey data. She is very partial to pretty maps and Bruce Springsteen.
 
 interests:
-  - Interest 1
-  - Interest 2
-  - Interest 3
+  - Transport inequalities
+  - Travel behaviour modelling
+  - Activity chains
 
 education:
   courses:
@@ -53,6 +48,12 @@ social:
   - icon: google-scholar
     icon_pack: ai
     link: https://scholar.google.com/citations?user=WdRvgioAAAAJ&hl=en
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/cpeiretgarcia
+  - icon: globe
+    icon_pack: fas
+    link: https://cpeiretgarcia.github.io/
 
 # Highlight the author in author lists? (true/false)
 highlight_name: false
@@ -62,4 +63,6 @@ user_groups:
   - Meet the team
 ---
 
-Clara joined CASA as a postdoc in January 2025. Her research focuses in identifying spatial inequalities in transport, and developing and applying new methods based using survey data. She is very partial to pretty maps and Bruce Springsteen.
+I'm a Research Fellow in Urban Analytics at the Centre for Advanced Spatial Analysis (CASA), working on the TRACK-UK project. My research focuses on understanding the diversity of human mobility, mainly how people navigate urban spaces in fundamentally different ways. Rather than looking at the "average" traveler, I dig into how travel behaviors vary across individuals and populations, exploring the spatial distribution of these distinct patterns. 
+
+I'm particularly interested in how people engage in their daily activities, and how this results into different activity chains that vary from person to person. A central question driving my work is: how well do transport systems actually accommodate this diversity of travel and activity patterns? Where do they fall short? What inequalities derive from this mismatch? Methodologically, I work primarily with survey data, though I'm open to exploring any mobility-related data source.

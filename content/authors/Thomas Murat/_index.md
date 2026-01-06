@@ -10,12 +10,7 @@ last_name: Murat
 superuser: false
 
 # Role/position
-role: PhD Researcher
-
-# Organizations/Affiliations
-organizations:
-  - name: Bartlett Centre for Advanced Spatial Analysis, University College London
-    url: 'https://www.ucl.ac.uk/bartlett/casa'
+role: PhD Researcher, UCL
 
 # Short bio (displayed in user profile at end of posts)
 bio: Having completed his undergraduate, PGCE and MSc degrees at UCL, Tom is aiming to complete the set with a PhD at CASA. He is currently working on using Agent Based Models to develop effective bus policies. When he is not lost in MatSIM, Tom is usually found dragging reluctant teenagers through their GCSEs and A Levels.

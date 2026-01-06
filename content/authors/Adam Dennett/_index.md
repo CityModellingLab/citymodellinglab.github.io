@@ -12,11 +12,6 @@ superuser: false
 # Role/position
 role: Professor of Urban Analytics, UCL
 
-# Organizations/Affiliations
-organizations:
-  - name: Bartlett Centre for Advanced Spatial Analysis, University College London
-    url: 'https://www.ucl.ac.uk/bartlett/casa'
-
 # Short bio (displayed in user profile at end of posts)
 bio: Since his CASA debut in 2010, Adam has risen to the rank of Professor of Urban Analytics. Despite a fondness for body art and drum and bass music, he still manages to hold it down on the mapping and modelling front.
 

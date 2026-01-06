@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Bea Taylor
+title: Beatrice Taylor
 
 # Full Name (for SEO)
 first_name: Beatrice
@@ -10,20 +10,19 @@ last_name: Taylor
 superuser: false
 
 # Role/position
-role: Research Fellow
+role: Research Fellow, UCL
 
-# Organizations/Affiliations
-organizations:
-  - name: Bartlett Centre for Advanced Spatial Analysis, University College London
-    url: 'https://www.ucl.ac.uk/bartlett/casa'
+# # Organizations/Affiliations
+# organizations:
+#   - name: Bartlett Centre for Advanced Spatial Analysis, University College London
+#     url: 'https://www.ucl.ac.uk/bartlett/casa'
 
 # Short bio (displayed in user profile at end of posts)
-bio: Bea joined CASA as a postdoc in 2024. She’s interested in applied machine learning, mathematical modelling, public policy and (unrelatedly) knitting.
+bio: Bea is a postdoc in CASA, she's interested in the intersection of computing and theory! 
 
 interests:
-  - Interest 1
-  - Interest 2
-  - Interest 3
+  - Application of natural language processing to urban textual data
+  - Using Large Data to understand spatial inequalities
 
 education:
   courses:
@@ -50,7 +49,13 @@ social:
   - icon: google-scholar
     icon_pack: ai
     link: https://scholar.google.com/citations?user=RPKzlgoAAAAJ&hl=en
-
+  - icon: github
+    icon_pack: fab
+    link: https://github.com/Bea-Taylor
+  - icon: globe
+    icon_pack: fas
+    link: http://bea-taylor.com/
+    
 # Highlight the author in author lists? (true/false)
 highlight_name: false
 
@@ -59,4 +64,8 @@ user_groups:
   - Meet the team
 ---
 
-Bea joined CASA as a postdoc in 2024. She’s interested in applied machine learning, mathematical modelling, public policy and (unrelatedly) knitting.
+I am a postdoc in CASA, working on the Smart Cities theme as part of the AI for Collective Intelligence (AI4CI) hub. My current research focuses on using machine learning methods to analyse how London's built environment is changing. Recently I've been using natural language processing to develop a data-driven characterisation of responses to planning applications. 
+
+I'm interesting in the application of computational methods to address real world problems, with a focus on how quantitative findings can inform policy. My PhD studies were completed in the Computer Science department, UCL, where my research focussed on developing computational models to gain a deeper understanding of disease progression in dementia. I completed both my undergraduate and integrated master's degree in Mathematics at the University of Warwick. 
+
+I like to take an interdisciplinary approach to my work. Of late I've been enjoying learning about the mathematics of generative models, as well as the theory of spatial inequality. Beyond my research activities I also do some teaching, lecturing on the CASA masters course Quantitative Methods. I'm interested in outreach and science communication - during my PhD I was involved in women in STEM initiatives, and edited the Maths magazine Chalkdust. 

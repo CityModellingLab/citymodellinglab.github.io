@@ -10,12 +10,7 @@ last_name: Hoang
 superuser: false
 
 # Role/position
-role: Research Assistant
-
-# Organizations/Affiliations
-organizations:
-  - name: Department of Geography, Universität Zürich
-    url: 'https://www.geo.uzh.ch/'
+role: Research Assistant, UZH
 
 # Short bio (displayed in user profile at end of posts)
 bio: Shaun Hoang is an urban mobility researcher at the University of Zurich, and University College London (UCL). His recent projects focus on transport resilience, transport inequality and open geospatial data challenges in developing economies. 

@@ -10,27 +10,22 @@ last_name: Yosifof
 superuser: false
 
 # Role/position
-role: PhD Researcher
-
-# Organizations/Affiliations
-organizations:
-  - name: Bartlett Centre for Advanced Spatial Analysis, University College London
-    url: 'https://www.ucl.ac.uk/bartlett/casa'
+role: PhD Researcher, UCL
 
 # Short bio (displayed in user profile at end of posts)
-bio: Roei joined CASA as a first year PhD student in 2025 after previously working as an architect in urban design projects and as part time researcher. He is interested in macro scale urban and regional modeling, machine learning, and basketball.
+bio: PhD student in CASA currently focusing on locations of new towns, formerly an architect and urban planner.
 
 interests:
-  - Interest 1
-  - Interest 2
-  - Interest 3
+  - Urban Analytics
+  - Urban Strategic Planning
+  - Simulation Models
 
 education:
   courses:
     - course: MArch in Architecture
       institution: Technion - Israel Institute of Technology
       year: 2021
-    - course: BSc in Geography
+    - course: BSc in Architecture
       institution: Technion - Israel Institute of Technology
       year: 2020
 
@@ -40,13 +35,10 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    # link: 'mailto:a.dennett@ucl.ac.uk'
+    link: 'mailto:roei.yosifof.25@ucl.ac.uk'
   - icon: linkedin
     icon_pack: fab
     link: https://www.linkedin.com/in/roei-yosifof-6a1471178/
-  - icon: google-scholar
-    icon_pack: ai
-    link: https://scholar.google.com/citations?hl=en&user=nIlAvv8AAAAJ
 
 # Highlight the author in author lists? (true/false)
 highlight_name: false
@@ -55,4 +47,8 @@ highlight_name: false
 user_groups:
   - Meet the team
 ---
-Roei joined CASA as a first year PhD student in 2025 after previously working as an architect in urban design projects and as part time researcher. He is interested in macro scale urban and regional modeling, machine learning, and basketball.
+Roei joined CASA as a first year PhD student in 2025, where his research focuses on possible optimal locations for new towns in the UK.
+
+He is a trained architect with professional experience in urban planning and regional masterplans. Prior to joining CASA Roei was a researcher at the Architectural Visual Perception lab (AVPL) at Technion IIT, where he worked on simulation models on a city scale.
+
+His research interests include urban and regional modelling, urban planning and machine learning applications

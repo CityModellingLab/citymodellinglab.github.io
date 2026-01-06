@@ -12,11 +12,6 @@ superuser: false
 # Role/position
 role: Professor of Urban Analytics, UZH
 
-# Organizations/Affiliations
-organizations:
-  - name: Department of Geography, Universität Zürich
-    url: 'https://www.geo.uzh.ch/'
-
 # Short bio (displayed in user profile at end of posts)
 bio: Esra's most recent research is driven by questions related to transport and energy transitions to net-zero, urban change, and their links to socio-economic and health inequalities. Her new research group at the Department of Geography will focus on computational methods to study urban systems, integrating traditional and big data sources. 
 
