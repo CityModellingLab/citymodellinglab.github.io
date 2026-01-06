@@ -1,5 +1,5 @@
 ---
-title: Understanding Traveller Decision Making---a Crowd Sourced Big Data Analysis
+title: Understanding Traveller Decision Making---a Crowd-Sourced Big Data Analysis
   of the London Travel Demand Survey
 authors:
 - Gerard Casey
@@ -7,11 +7,11 @@ authors:
 - Elisabete Silva
 - Peter Guthrie
 date: '2016-01-01'
-publishDate: '2026-01-06T12:18:00.305137Z'
+publishDate: '2026-01-06T12:30:30.897344Z'
 publication_types:
 - chapter
 publication: '*Transforming the Future of Infrastructure through Smarter Information:
-  Proceedings of the International Conference on Smart Infrastructure and ConstructionConstruction,
+  Proceedings of the International Conference on Smart Infrastructure and Construction,
   27--29 June 2016*'
 doi: 10.1680/tfitsi.61279.741
 abstract: Engineers have begun to take interest in the interface between the structures
@@ -21,9 +21,9 @@ abstract: Engineers have begun to take interest in the interface between the str
   from the survey data. This analysis attempted to relate the financial cost and time
   cost of a journey to the socio-economic status of a traveller in order to see what
   relationship existed. Relating this empirical exhibited data to real-world data
-  is challenging. Crowd sourced big-data avenues were explored in order to derive
+  is challenging. Crowd-sourced big-data avenues were explored in order to derive
   realistic information that considers factors such as traffic congestion, service
-  time tables and the underlying complexity of the London transport network. It was
+  timetables and the underlying complexity of the London transport network. It was
   hypothesised that the socio-economic status of the traveller, the distance and the
   motivation of the journey would impact on traveller decision making. However, no
   statistically significant results were found. It is concluded that the use of crude

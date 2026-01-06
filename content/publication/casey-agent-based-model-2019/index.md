@@ -6,11 +6,11 @@ authors:
 - Fatema Karim-Khaku
 - Chris Bruce
 date: '2019-01-01'
-publishDate: '2026-01-06T12:18:00.282139Z'
+publishDate: '2026-01-06T12:30:30.877074Z'
 publication_types:
 - paper-conference
-publication: '*European Transport Conference 2019Association for European Transport
-  (AET)*'
+publication: '*European Transport Conference 2019 (Association for European Transport,
+  AET)*'
 abstract: Agent based modelling is a modelling paradigm which may transform how key
   policy decisions are made. Agent Based Models (ABMs) simulate actions and interactions
   of agents with a view to assessing their effects on the system as a whole. They

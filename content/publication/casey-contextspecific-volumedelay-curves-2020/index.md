@@ -7,7 +7,7 @@ authors:
 - Krishna Kumar
 - Kenichi Soga
 date: '2020-01-01'
-publishDate: '2026-01-06T12:18:00.289988Z'
+publishDate: '2026-01-06T12:30:30.883958Z'
 publication_types:
 - manuscript
 publication: '*arXiv*'
@@ -30,7 +30,7 @@ abstract: Traffic congestion across the world has reached chronic levels. Despit
   By combining them for different road types in London, new context-specific volume-delay
   functions can be generated. This method shows promise in selected locations with
   the generation of robust functions. In other locations it highlights the need to
-  better understand other influencing factors, such as the presence of on road parking
+  better understand other influencing factors, such as the presence of on-road parking
   or weather events.
 tags:
 - Statistics - Applications

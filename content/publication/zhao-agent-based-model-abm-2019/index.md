@@ -7,7 +7,7 @@ authors:
 - Gerard Casey
 - Kenichi Soga
 date: '2019-01-01'
-publishDate: '2026-01-06T12:18:00.389716Z'
+publishDate: '2026-01-06T12:30:30.972241Z'
 publication_types:
 - article-journal
 doi: 10.1680/icsic.64669.203
@@ -20,7 +20,7 @@ abstract: 'Agent-Based Model (ABM) is a promising tool for city-scale traffic si
   a detailed road network and hour-long simulation time step to capture realistic
   variations in traffic conditions. Agent speed is determined according to a simplified
   volume-delay macroscopic relationship, which is more efficient than applying microscopic
-  rules (e.g., car following) for evaluating city-scale traffic conditions. Two particular
+  rules (e.g. car following) for evaluating city-scale traffic conditions. Two particular
   challenges of building such an ABM are addressed in this paper: data availability
   and computational cost. The key inputs to the ABM are sourced from standard and
   publicly available datasets, including the travel demand surveys published by local

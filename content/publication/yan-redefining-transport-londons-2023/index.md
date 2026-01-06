@@ -5,7 +5,7 @@ authors:
 - Xinlei Yan
 - Adam Dennett
 date: '2023-01-01'
-publishDate: '2026-01-06T12:18:00.374859Z'
+publishDate: '2026-01-06T12:30:30.959537Z'
 publication_types:
 - article-journal
 publication: '*Applied Geography*'
@@ -32,7 +32,7 @@ abstract: Neighbourhoods are fundamental spatial units to present social phenome
   sub-divide urban activity.
 tags:
 - London
-- Neighbourhood
-- Spatial clustering
-- Tertiary-communities
+- neighbourhood
+- spatial clustering
+- tertiary-communities
 ---
