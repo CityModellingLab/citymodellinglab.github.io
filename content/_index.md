@@ -44,8 +44,8 @@ sections:
   - block: slider
     content:
       slides:
-      - title: "Artificial Intelligence for Collective Intelligence (AI4CI) – Smart Cities"
-        content: A new research hub to address society’s most pressing challenges we need new kinds of Collective Intelligence
+      - title: "Artificial Intelligence for Collective Intelligence (AI4CI) - Smart Cities"
+        content: A new research hub to address society's most pressing challenges we need new kinds of Collective Intelligence
         align: left
         background:
           image:

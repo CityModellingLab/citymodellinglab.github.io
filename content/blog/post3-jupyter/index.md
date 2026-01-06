@@ -1,12 +1,11 @@
 ---
 ### Required
 title: "A post rendered from a Jupyter notebook (.ipynb)"
-date: 2025-05-02
+date: 2025-06-02
 authors: 
-- Beatrice Taylor
-- Claude Lynch
+
 summary: "The summary that will show up in the preview card"
-draft: false
+draft: true
 featured: true
 
 ### Optional

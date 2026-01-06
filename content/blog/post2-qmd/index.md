@@ -1,12 +1,11 @@
 ---
 ### Required
 title: "Some other post rendered from .qmd"
-date: 2025-05-02
+date: 2025-07-02
 authors: 
-- Adam Dennett
-- Roei Yosifof
+
 summary: "The summary that will show up in the preview card"
-draft: false
+draft: true
 featured: true
 
 ### Optional

@@ -1,12 +1,12 @@
 ---
 ### Required
-title: "A post renderd from Markdown (.md)"
+title: "A post rendered from Markdown (.md)"
 date: 2025-10-02
 authors: 
-- Claude Lynch
-- Esra Suel
+# - Claude Lynch
+# - Esra Suel
 summary: "The summary that will show up in the preview card"
-draft: false
+draft: true
 featured: true
 
 ### Optional
