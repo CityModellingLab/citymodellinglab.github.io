@@ -6,7 +6,7 @@ authors:
 - Fatema Karim-Khaku
 - Chris Bruce
 date: '2019-01-01'
-publishDate: '2026-01-06T12:11:35.240697Z'
+publishDate: '2026-01-06T12:14:27.582193Z'
 publication_types:
 - paper-conference
 abstract: Agent based modelling is a modelling paradigm which may transform how key

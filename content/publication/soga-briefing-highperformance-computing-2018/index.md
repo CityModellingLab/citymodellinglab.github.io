@@ -6,7 +6,7 @@ authors:
 - Krishna Kumar
 - Bingyu Zhao
 date: '2018-01-01'
-publishDate: '2026-01-06T12:11:35.308667Z'
+publishDate: '2026-01-06T12:14:27.640378Z'
 publication_types:
 - article-journal
 publication: '*Proceedings of the Institution of Civil Engineers - Smart Infrastructure

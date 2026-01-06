@@ -5,7 +5,7 @@ authors:
 - Roei Yosifof
 - Sagi Dalyot
 date: '2019-01-01'
-publishDate: '2026-01-06T12:11:35.278284Z'
+publishDate: '2026-01-06T12:14:27.614482Z'
 publication_types:
 - paper-conference
 abstract: Various route planning algorithms exist today in many location-based services.

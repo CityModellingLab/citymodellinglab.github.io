@@ -8,7 +8,7 @@ authors:
 - Peter Guthrie
 - Krishna Kumar
 date: '2017-01-01'
-publishDate: '2026-01-06T12:11:35.256063Z'
+publishDate: '2026-01-06T12:14:27.595462Z'
 publication_types:
 - paper-conference
 abstract: This paper presents a framework for using real-time big-data to inform a
