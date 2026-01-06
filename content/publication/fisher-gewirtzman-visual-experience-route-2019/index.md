@@ -5,7 +5,7 @@ authors:
 - Roei Yosifof
 - Sagi Dalyot
 date: '2019-01-01'
-publishDate: '2026-01-06T12:16:55.548141Z'
+publishDate: '2026-01-06T12:18:00.323543Z'
 publication_types:
 - paper-conference
 publication: '*Proceedings of the 12th Space Syntax Symposium*'

@@ -1,5 +1,5 @@
 ---
-title: Convolutional Neural Networks for Predicting the emphPerceived Density of Large
+title: Convolutional Neural Networks for Predicting the Perceived Density of Large
   Urban Fabrics
 authors:
 - Guy Austern
@@ -8,7 +8,7 @@ authors:
 - Shahar Yadin
 - Dafna Fisher-Gewirtzman
 date: '2025-01-01'
-publishDate: '2026-01-06T12:16:55.492969Z'
+publishDate: '2026-01-06T12:18:00.263542Z'
 publication_types:
 - article-journal
 publication: '*Computers, Environment and Urban Systems*'

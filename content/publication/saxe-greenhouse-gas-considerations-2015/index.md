@@ -7,7 +7,7 @@ authors:
 - Kenichi Soga
 - Heather Cruickshank
 date: '2015-01-01'
-publishDate: '2026-01-06T12:16:55.570310Z'
+publishDate: '2026-01-06T12:18:00.345777Z'
 publication_types:
 - article-journal
 publication: '*Proceedings of the Institution of Civil Engineers - Engineering Sustainability*'
