@@ -7,7 +7,7 @@ authors:
 - Elisabete Silva
 - Peter Guthrie
 date: '2016-01-01'
-publishDate: '2026-01-06T12:47:17.108871Z'
+publishDate: '2026-01-06T16:04:02.211989Z'
 publication_types:
 - chapter
 publication: '*Transforming the Future of Infrastructure through Smarter Information:

@@ -8,7 +8,7 @@ authors:
 - Peter Guthrie
 - Krishna Kumar
 date: '2017-01-01'
-publishDate: '2026-01-06T12:47:17.101377Z'
+publishDate: '2026-01-06T16:04:02.203990Z'
 publication_types:
 - paper-conference
 publication: '*Transportation Research Board 96th Annual Meeting*'
