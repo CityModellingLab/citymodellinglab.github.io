@@ -44,8 +44,8 @@ sections:
   - block: slider
     content:
       slides:
-      - title: "Artificial Intelligence for Collective Intelligence (AI4CI) - Smart Cities"
-        content: A new research hub to address society's most pressing challenges we need new kinds of Collective Intelligence
+      - title: Artificial Intelligence for Collective Intelligence - Smart Cities
+        content: AI-powered collective intelligence for smarter city planning 
         align: left
         background:
           image:
@@ -58,7 +58,7 @@ sections:
           text: Learn More
           url: project/ai4ci
       - title: National Trip End Model Synthetic Population
-        content: A synthetic population for the UK Department for Transport
+        content: Building a synthetic population for the UK Department for Transport
         align: left
         background:
           image:
@@ -70,8 +70,8 @@ sections:
         link:
           text: Learn More
           url: project/ntem
-      - title: TRACK-UK
-        content: Track-UK
+      - title: TRACK-UK - Synthesised Census and Small Area Statistics for Transport and Energy
+        content: Neighbourhood-scale mobility insights for UK decarbonisation
         align: left
         background:
           image:
