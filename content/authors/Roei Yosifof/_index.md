@@ -22,10 +22,10 @@ interests:
 
 education:
   courses:
-    - course: MArch in Architectural Science
+    - course: MArch in Architecture
       institution: Technion - Israel Institute of Technology
       year: 2021
-    - course: BSc in Architecture
+    - course: BSc in Architectural Sciences
       institution: Technion - Israel Institute of Technology
       year: 2020
 
