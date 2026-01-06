@@ -5,12 +5,11 @@ authors:
 - Roei Yosifof
 - Sagi Dalyot
 date: '2019-01-01'
-publishDate: '2026-01-06T12:00:30.699395Z'
+publishDate: '2026-01-06T12:11:35.278284Z'
 publication_types:
 - paper-conference
-publication: '*Proceedings of the 12th Space Syntax Symposium*'
 abstract: Various route planning algorithms exist today in many location-based services.
-  These algorithms aim to optimize a certain criterion, mostly the shortest path or
+  These algorithms aim to optimise a certain criterion, mostly the shortest path or
   the shortest travelled time from origin to destination. Urban routes are many times
   experienced and perceived differently by different users, or even perceived differently
   by the same user having a different purpose of travel. We argue that each route
@@ -33,4 +32,10 @@ abstract: Various route planning algorithms exist today in many location-based s
   planning model can suggest tailored routes for specific user/pedestrian profiles,
   augmenting the existing route planning algorithms, and enriching the currently used
   location-based services.
+tags:
+- Route Planning
+- Visual Perception
+- Urban Environments
+- Pedestrian Experience
+- 3D Visibility Analysis
 ---

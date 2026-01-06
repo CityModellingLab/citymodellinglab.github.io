@@ -7,7 +7,7 @@ authors:
 - Gerard Casey
 - Kenichi Soga
 date: '2019-01-01'
-publishDate: '2026-01-06T12:00:30.765933Z'
+publishDate: '2026-01-06T12:11:35.348813Z'
 publication_types:
 - article-journal
 doi: 10.1680/icsic.64669.203
@@ -31,4 +31,10 @@ abstract: 'Agent-Based Model (ABM) is a promising tool for city-scale traffic si
   significantly. Preliminary validation of the ABM is conducted by comparing its results
   with a published model. Overall, the ABM has been demonstrated to run efficiently
   and produce reliable results.'
+tags:
+- Agent Based Models
+- City-Scale Simulation
+- Traffic Simulation
+- High Performance Computing
+- San Francisco
 ---

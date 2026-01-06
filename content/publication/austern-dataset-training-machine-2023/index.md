@@ -6,11 +6,10 @@ authors:
 - Roei Yosifof
 - Dafna Fisher-Gewirtzman
 date: '2023-01-01'
-publishDate: '2026-01-06T12:00:30.654798Z'
+publishDate: '2026-01-06T12:11:35.233404Z'
 publication_types:
 - paper-conference
-publication: '*Proceedings of the 41st Conference on Education and Research in Computer
-  Aided Architectural Design in Europe (eCAADe 2023)*'
+publication: '*Graz*'
 abstract: Previous studies have described the effects of urban attributes such as
   the Spatial Openness Index (SOI) on pedestrians' experience. SOI uses 3-dimensional
   ray casting to quantify the volume of visible space from a single viewpoint. The
@@ -20,9 +19,15 @@ abstract: Previous studies have described the effects of urban attributes such a
   tools. Convolutional Neural Networks (CNN), have excellent performance in computer
   vision in image processing applications. They can be trained to predict the SOI
   analysis for large urban fabrics in real-time. However, these supervised learning
-  models need a substantial amount of labeled data to train on. For this purpose,
+  models need a substantial amount of labelled data to train on. For this purpose,
   we developed a method to generate a large series of height maps and SOI maps of
   urban fabrics in New York City and encoded them as images using colour information.
   These height map - SOI analysis image pairs can be used as training data for a CNN
   to provide rapid, precise visibility simulations on an urban scale.
+tags:
+- Machine Learning
+- Urban Planning
+- Visual Perception
+- Spatial Openness Index
+- Dataset Generation
 ---

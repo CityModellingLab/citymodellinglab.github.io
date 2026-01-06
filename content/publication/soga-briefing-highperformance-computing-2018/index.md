@@ -6,7 +6,7 @@ authors:
 - Krishna Kumar
 - Bingyu Zhao
 date: '2018-01-01'
-publishDate: '2026-01-06T12:00:30.728817Z'
+publishDate: '2026-01-06T12:11:35.308667Z'
 publication_types:
 - article-journal
 publication: '*Proceedings of the Institution of Civil Engineers - Smart Infrastructure
@@ -25,4 +25,10 @@ abstract: Smarter cities and infrastructure are essential if the world is to res
   paper discusses the advancements and challenges in high-performance computing (hardware,
   algorithms, software, and visualisation techniques) in achieving the possibility
   of real-time city-scale simulations.
+tags:
+- High-performance Computing
+- City-Scale Modelling
+- Smart Infrastructure
+- Simulation
+- Distributed Systems
 ---

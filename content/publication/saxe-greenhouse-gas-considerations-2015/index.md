@@ -7,7 +7,7 @@ authors:
 - Kenichi Soga
 - Heather Cruickshank
 date: '2015-01-01'
-publishDate: '2026-01-06T12:00:30.721696Z'
+publishDate: '2026-01-06T12:11:35.301211Z'
 publication_types:
 - article-journal
 publication: '*Proceedings of the Institution of Civil Engineers - Engineering Sustainability*'
@@ -25,4 +25,10 @@ abstract: Transportation-related greenhouse gas (GHG) emissions account for an i
   their associated GHG emissions. Guidance is given on the aspects of rail planning,
   design and construction that must be considered to more fully understand the associated
   GHG impacts.
+tags:
+- Rail Infrastructure
+- Greenhouse Gas Emissions
+- Sustainability
+- Transport Planning
+- UK
 ---

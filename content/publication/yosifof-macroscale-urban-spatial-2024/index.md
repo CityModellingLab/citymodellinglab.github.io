@@ -5,7 +5,7 @@ authors:
 - Guy Austern
 - Dafna Fisher-Gewirtzman
 date: '2024-01-01'
-publishDate: '2026-01-06T12:00:30.758428Z'
+publishDate: '2026-01-06T12:11:35.339812Z'
 publication_types:
 - article-journal
 abstract: "Urban morphologies play a crucial role in influencing pedestrians' visual
@@ -20,8 +20,8 @@ abstract: "Urban morphologies play a crucial role in influencing pedestrians' vi
   and is now referred to as the Urban Spatial Openness Index (USOI) model. The developed
   methodology involves performing perceived density analysis on an urban scale, by
   deploying a 5x5m analysis grid in open spaces, unoccupied by buildings. The analysis
-  results are presented as heatmaps, visualizing the perceived density of open spaces.
-  The use of the model is demonstrated by analyzing nine diverse urban fabrics, varying
+  results are presented as heatmaps, visualising the perceived density of open spaces.
+  The use of the model is demonstrated by analysing nine diverse urban fabrics, varying
   in morphology, density, and design traditions in three cities: New York City, Tel
   Aviv and Zurich. USOI results for different urban morphologies provide insights
   into the relationships between various morphologies and their respective perceived
@@ -29,4 +29,10 @@ abstract: "Urban morphologies play a crucial role in influencing pedestrians' vi
   regarding perceived density on a macro scale. The analysis of varying morphologies
   could potentially contribute to future datasets of visibility and perceived density,
   serving as a valuable resource for practitioners and researchers."
+tags:
+- Urban Spatial Openness Index
+- USOI
+- Perceived Density
+- Macro-scale Analysis
+- Urban Morphology
 ---

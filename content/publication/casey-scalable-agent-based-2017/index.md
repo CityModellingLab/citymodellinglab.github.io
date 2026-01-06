@@ -8,11 +8,9 @@ authors:
 - Peter Guthrie
 - Krishna Kumar
 date: '2017-01-01'
-publishDate: '2026-01-06T12:00:30.677707Z'
+publishDate: '2026-01-06T12:11:35.256063Z'
 publication_types:
 - paper-conference
-publication: '*Transportation Research Board 96th Annual MeetingTransportation Research
-  Board*'
 abstract: This paper presents a framework for using real-time big-data to inform a
   transport Agent Based Model (ABM) for a range of scenario testing applications.
   Computational advances have enabled for increasingly complex, bottom-up, fine resolution
@@ -33,4 +31,10 @@ abstract: This paper presents a framework for using real-time big-data to inform
   storing of dynamic data that may be manipulated in order to simulate local and global
   hard infrastructure scenarios alone or in tandem with traditional policy or dynamic
   policy making scenarios.
+tags:
+- Agent Based Models
+- Big Data
+- Multi-modal Modeling
+- Real-Time Data
+- Transport Networks
 ---

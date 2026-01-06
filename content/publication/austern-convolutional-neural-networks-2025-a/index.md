@@ -8,7 +8,7 @@ authors:
 - Shahar Yadin
 - Dafna Fisher-Gewirtzman
 date: '2025-01-01'
-publishDate: '2026-01-06T12:11:35.214895Z'
+publishDate: '2026-01-06T12:11:35.225359Z'
 publication_types:
 - article-journal
 publication: '*Computers, Environment and Urban Systems*'
@@ -32,9 +32,10 @@ abstract: Urban density, along with the associated urban morphology and topology
   by the USOI. The use of a predictive model can significantly reduce the processing
   time of 3D visibility analysis on the urban scale.
 tags:
-- Convolutional Neural Networks
-- Urban Density
-- Urban Spatial Openness Index
-- Perceived Density
-- Machine Learning
+- Convolutional
+- Machine learning
+- Neural Networks
+- Perceived density
+- Ray casting
+- Urban spatial openness index
 ---
