@@ -6,15 +6,15 @@ authors:
 - Adam Dennett
 - Andrew Hudson-Smith
 date: '2018-04-01'
-publishDate: '2025-12-15T22:32:14.718558Z'
+publishDate: '2026-01-06T11:53:14.079816Z'
 publication_types:
 - paper-conference
 abstract: The concept of Digital Twin is becoming increasingly popular with researchers
-  and professionals in  the AEC industries as a means of visualising, modelling and
+  and professionals in the AEC industries as a means of visualising, modelling and
   working with complex urban systems. This is achieved through the coupling of physical
-  systems with comprehensive digital representations  that automatically update to
-  match the state of their physical counterpart. Using real-time data from  IoT technologies
-  and advanced 3D visualisation this research conducts a practical investigation into  the
-  process of creating and working with a Digital Twin of the new UCL Campus at Here
-  East on the Queen Elizabeth Olympic Park.
+  systems with comprehensive digital representations that automatically update to
+  match the state of their physical counterpart. Using real-time data from IoT technologies
+  and advanced 3D visualisation this research conducts a practical investigation into
+  the process of creating and working with a Digital Twin of the new UCL Campus at
+  Here East on the Queen Elizabeth Olympic Park.
 ---
