@@ -24,6 +24,7 @@ marketing:
 
 # Site header
 header:
+  on_scroll: fixed
   navbar:
     enable: true
     align: r
@@ -31,6 +32,7 @@ header:
     show_day_night: false
     show_search: true
     highlight_active_link: false
+    sticky: true
 
 # Site footer
 footer:
