@@ -1,5 +1,6 @@
 title: 'City Modelling Lab' # Website name
 baseURL: 'https://www.citymodellinglab.uk/' # Website URL
+buildFuture: true
 
 cascade:
   - params:

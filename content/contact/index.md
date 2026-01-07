@@ -7,8 +7,7 @@ sections:
   - block: contact
     content:
       title: Get in touch
-      text: |-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer tempus augue non tempor egestas. Proin nisl nunc, dignissim in accumsan dapibus, auctor ullamcorper neque. 
+      text:
       email: casa@ucl.ac.uk
       phone: +44 (0)20 3108 4910
       address:

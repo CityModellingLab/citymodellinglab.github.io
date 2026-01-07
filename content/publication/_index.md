@@ -4,8 +4,8 @@ type: landing
 sections:
   - block: portfolio
     content:
-      title: Selected Works
-      subtitle: What we've published...
+      title: Publications
+      subtitle: What we've written...
       filters:
         folders:
           - publication
