@@ -5,7 +5,7 @@ type: landing
 sections:
   - block: hero
     content:
-      title: Meet The Team  
+      title: Our Team  
       text: Bridge the gap between theory, practice, and policy
     design:
       background:
@@ -57,7 +57,9 @@ sections:
   - block: markdown 
     content:
       text: |
-        Our collaboration bridges the gap between academia and applications by aligning the pace of consultancy of Arup with the depth of research of UCL's Centre for Advanced Spatial Analysis (CASA) and the University of Zürich (UZH). We are building a future where practitioners can assess interventions across interconnected systems, rather than in isolation. By breaking down policy silos, we aim to enable truly participatory decision-making informed by rigorous data. Our vision rests on two core missions:
+        Our collaboration bridges the gap between academia and applications by aligning the pace of consultancy of Arup with the depth of research of UCL's Centre for Advanced Spatial Analysis (CASA) and the University of Zürich (UZH). 
+        
+        We are building a future where practitioners can assess interventions across interconnected systems, rather than in isolation. By breaking down policy silos, we aim to enable truly participatory decision-making informed by rigorous data. Our vision rests on two core missions:
 
         1. **Sustainable & Equitable Environments:** We must move beyond traditional transport metrics like journey time savings. Instead, we evaluate success through the lens of desired outcomes—such as reduced carbon emissions, improved affordable housing access, and increased public transport usage. This approach prioritizes the creation of sustainable, shared urban economies.
         
