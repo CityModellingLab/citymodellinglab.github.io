@@ -37,6 +37,7 @@ Clone the repository and enter project folder
 git clone https://github.com/shaunhoang/cml-site.git
 cd ../cml-site/
 ```
+
 To start development server (available on `http://localhost:1313/`)
 ```bash
 hugo server
