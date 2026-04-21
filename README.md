@@ -1,54 +1,58 @@
-This website is built using Hugo with local templates, deployed with GitHub Pages. You can edit and commit directly on GitHub's codespace for minor text edits, or locally by following these steps.
+This website is built with Hugo, local templates, Quarto for computational blog posts, and GitHub Pages for deployment.
 
-## 1. Setting up local development
+Small text edits can be made directly in GitHub or a Codespace. For larger changes, use the local setup below.
+
+## 1. Local Setup
 
 ### Windows
-- Install Scoop, the Windows package manager
 
-    ```pwsh
-    Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
-    iwr -useb get.scoop.sh | iex
-    # Press `Y` and Enter if asked `Do you want to change the execution policy?`. 
-    ```
-- Install Hugo and its dependencies
+Install Scoop:
 
-    ```pwsh
-    scoop bucket add extras
-    scoop install git hugo-extended nodejs python quarto
-    python -m pip install -r requirements-quarto.txt
-    ```
-
-### Mac
-- Install Homebrew, the Mac package manager
-
-    ```pwsh
-    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
-    ```
-- Install Hugo and its dependencies
-    ```pwsh
-    brew update && brew upgrade
-    brew install git hugo node python quarto
-    python -m pip install -r requirements-quarto.txt
-    ```
-
-Clone the repository and enter project folder
-```bash
-# adjust accordingly
-git clone https://github.com/shaunhoang/cml-site.git
-cd ../cml-site/
+```pwsh
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser
+iwr -useb get.scoop.sh | iex
 ```
 
-To start development server (available on `http://localhost:1313/`)
+Install the site tools:
+
+```pwsh
+scoop bucket add extras
+scoop install git hugo-extended nodejs python quarto
+python -m pip install -r requirements-quarto.txt
+```
+
+### macOS
+
+Install Homebrew:
+
+```bash
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
+```
+
+Install the site tools:
+
+```bash
+brew update
+brew install git hugo node python quarto
+python -m pip install -r requirements-quarto.txt
+```
+
+Clone and enter the repository:
+
+```bash
+git clone https://github.com/shaunhoang/cml-site.git
+cd cml-site
+```
+
+Preview the Hugo site:
+
 ```bash
 hugo server
 ```
 
-If you are editing computational blog posts (`index.qmd` or `index.ipynb`), use Quarto preview instead. This executes the notebook/code cells, writes the generated `index.md`, and runs Hugo for preview:
-```bash
-quarto preview
-```
+Open `http://localhost:1313/`.
 
-## 2. Adding a Blog Post
+## 2. Blog Posts
 
 Blog posts are Hugo page bundles. Each post lives in its own folder:
 
@@ -58,91 +62,166 @@ content/blog/my-post/
   featured.jpg
 ```
 
-Hugo only publishes the final `index.md`. It does not execute Python, R, notebooks, or Quarto files. For computational posts, members write `index.qmd` or `index.ipynb`, then render it with Quarto to create/update the final Hugo-friendly `index.md`.
+Use one of these source formats:
 
-Follow these steps to publish a blog post:
+- Plain post: write `content/blog/my-post/index.md`.
+- Quarto post: write `content/blog/my-post/index.qmd`, then render it to `index.md`.
+- Notebook post: write `content/blog/my-post/index.ipynb`, then render it to `index.md`.
 
-1. Create a post in a new folder in `content/blog/`, e.g.
-`content/blog/my-post/index.qmd`
-2. **IMPORTANT!** Include YAML front matter at the top of the `.md` and `.qmd` file, or in the first raw cell for `.ipynb`.
-    ```yaml
-    ---
-    ### Required
-    title: New Post
-    date: 2025-05-02
-    authors: # names must match names in content/authors for correct linkage
-    - Shaun Hoang
-    - Thomas Murat
-    summary: The summary that will show up in the preview card
-    draft: false
-    featured: true
+Hugo publishes `index.md`. It does not execute code by itself. Quarto executes `.qmd` and `.ipynb` posts and generates the Hugo-friendly `index.md`.
 
-    ### Optional
-    tags:
-    - Mobility Patterns
-    - Machine Learning
+### Required Front Matter
 
-    # If the post is linked to any project under content/project/, add the folder's name(s), e.g. ['ai4ci','ntem']. Otherwise, leave blank.
-    projects: [] 
-
-    # Add collaterals which will show up as clickable buttons on the post
-    url_code: ''
-    url_pdf: ''
-    url_slides: ''
-    url_video: ''
-    ---
-    ```
-3. Add a featured image in the same folder, must be named `featured.jpg`
-
-4. Render the final `index.md`
-    - Run from root folder (e.g. `cml-site\>`)
-      ```bash
-      quarto render content/blog/my-post/index.qmd
-      ```
-    - Or render all computational posts:
-      ```bash
-      quarto render
-      ```
-    - Quarto converts executable posts into Hugo-compatible Markdown at `index.md`. To preview while writing, run:
-      ```bash
-      quarto preview
-      ```
-    - To preview a plain Markdown post after editing `index.md`, run:
-      ```bash
-      hugo server
-      ```
-
-The site hides executable source code by default. To show a specific cell, add:
+Put this at the top of `index.md` or `index.qmd`. For `.ipynb`, put it in the first raw cell.
 
 ```yaml
-#| echo: true
+---
+title: New Post
+date: 2026-05-02
+authors:
+- Shaun Hoang
+- Thomas Murat
+summary: The summary shown in preview cards
+draft: false
+featured: true
+tags:
+- Mobility Patterns
+- Machine Learning
+projects: []
+url_code: ''
+url_pdf: ''
+url_slides: ''
+url_video: ''
+---
 ```
 
-5. Commit and push to GitHub
+Notes:
 
-    ```bash
-    git add .
-    git commit -m "Add post"
-    git push
-    ```
+- `authors` should match names under `content/authors/` so author links and profile backlinks work.
+- `draft: true` keeps a post out of production pages and member profile post lists.
+- `projects` should contain project folder names from `content/project/`, for example `['ai4ci']`.
+- Add a featured image named `featured.jpg` in the post folder.
 
-## 3. Adding members and projects
+### Rendering Posts
 
-Make a copy of an existing folder under `content/project/` or `content/authors/` and make the desired changes for the new team member or project. Note that the folder's name is important and is how the new project or person can be connected with other resources like blog posts and publications.
+Render one executable post:
 
-For consistency, the naming conventions are:
-- Project: single string (e.g., `../project/space-syntax-urban-morph/`)
-- People: full name as would appear on publications (e.g., `../authors/Sherlock Holmes/`)
+```bash
+quarto render content/blog/my-post/index.qmd
+```
 
-If a person's display name differs from the name used in publications or posts, add aliases in their author front matter:
+Render all executable posts:
+
+```bash
+quarto render
+```
+
+Preview:
+
+```bash
+hugo server
+```
+
+GitHub Pages also runs `quarto render` before building Hugo, so executable posts are rendered during deployment.
+
+### Code Blocks And Outputs
+
+By default, Quarto code is shown as folded code blocks with a `Show code` toggle. Show/hide code for one cell with
 
 ```yaml
+#| echo: true 
+#| echo: false
+```
+
+Hide code for a whole post by adding this to the post front matter:
+
+```yaml
+execute:
+  echo: false
+```
+
+## 3. Members And Projects
+
+Members live under `content/authors/`. Projects live under `content/project/`.
+
+To add a member:
+
+1. Copy an existing folder under `content/authors/`.
+2. Rename the folder to the person’s display name, for example `content/authors/Sherlock Holmes/`.
+3. Edit `_index.md`.
+4. Add or replace `avatar.jpg`.
+
+Useful member fields include:
+
+```yaml
+title: Sherlock Holmes
+role: Research Fellow
+user_groups:
+- Team
+bio: Short biography for cards and author blurbs.
+interests:
+- Urban modelling
+education:
+  courses:
+  - course: PhD in Cities
+    institution: UCL
+social:
+- icon: envelope
+  link: mailto:name@example.com
 author_aliases:
-  - Name on Publication
+- S. Holmes
+# Use `author_aliases` when publications or posts use a different name from the member page.
 ```
 
-## 4. Updating publications
 
-1. Update `publications.bib` following the BibTex format. Make sure CML authors' names are consistent with their names `content/authors/`.
-2. Commit and push this change to GitHub
-3. The Publications page and linkages to people will be automatically updated on the website.
+
+To add a project:
+
+1. Copy an existing folder under `content/project/`.
+2. Rename it with a URL-friendly folder name, for example `content/project/space-syntax-urban-morph/`.
+3. Edit `index.md`.
+4. Add or replace `featured.jpg`.
+
+Posts and publications can link to projects by listing the project folder name in `projects` in the YAML frontmatter.
+
+## 4. Publications
+
+`publications.bib` is the source file for the Publications section.
+
+To add or update publications:
+
+1. Edit `publications.bib` using standard BibTeX entries.
+2. Make sure CML author names match folders under `content/authors/`, or add `author_aliases` to the relevant member page.
+3. Commit and push `publications.bib`.
+
+GitHub Actions converts and commits each BibTeX entry into a Hugo page bundle under `content/publication/`, and redeploys the page.
+
+The importer reads common fields
+
+```text
+title, author, year, date, journal, booktitle, publisher, doi, abstract, keywords
+```
+
+To run the importer locally:
+
+```bash
+python scripts/import_publications.py publications.bib content/publication/
+hugo server
+```
+
+## 5. Publishing Changes
+
+Before pushing, run:
+
+```bash
+hugo --minify --renderToMemory
+```
+
+Then commit and push to `main`, GitHub Actions builds and deploys the site.
+
+```bash
+git status
+git add .
+git commit -m "Commit message"
+git push
+```
