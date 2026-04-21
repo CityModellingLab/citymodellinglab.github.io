@@ -1,0 +1,2 @@
+{{ $section := . }}
+{{ if eq $section "blog" }}Blog Post{{ else }}{{ title $section }}{{ end }}

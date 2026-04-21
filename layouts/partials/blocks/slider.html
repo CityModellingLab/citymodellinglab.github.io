@@ -1,0 +1,21 @@
+{{ $block := .Block }}
+<section class="slider-block" data-slider data-interval="{{ $block.design.interval | default 7500 }}">
+  {{ range $block.content.slides }}
+    {{ $bg := "" }}
+    {{ with .background.image.filename }}
+      {{ $bg = partial "image-url.html" (dict "Page" $.Page "Filename" .) }}
+    {{ end }}
+    <article class="slide{{ if $bg }} has-image{{ end }}" data-slide{{ if $bg }} style="--hero-image: url('{{ $bg }}')"{{ end }}>
+      <div class="hero-overlay"></div>
+      <div class="hero-content">
+        <h2>{{ .title }}</h2>
+        {{ with .content }}<p>{{ . }}</p>{{ end }}
+        {{ with .link }}<a class="button" href="{{ .url | relURL }}">{{ .text }}</a>{{ end }}
+      </div>
+    </article>
+  {{ end }}
+  <div class="slider-controls" aria-label="Slider controls">
+    <button type="button" data-slider-prev aria-label="Previous slide">‹</button>
+    <button type="button" data-slider-next aria-label="Next slide">›</button>
+  </div>
+</section>

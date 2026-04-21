@@ -1,0 +1,17 @@
+{{ $needle := lower (trim (printf "%v" .Name) " ") }}
+{{ $author := .Author }}
+{{ $names := slice $author.Title }}
+{{ with $author.Params.first_name }}
+  {{ $names = $names | append (printf "%s %s" . ($author.Params.last_name | default "")) }}
+{{ end }}
+{{ with $author.File }}
+  {{ $names = $names | append (path.Base (strings.TrimSuffix "/" .Dir)) }}
+{{ end }}
+{{ with $author.Params.author_aliases }}
+  {{ range . }}{{ $names = $names | append . }}{{ end }}
+{{ end }}
+{{ $matched := false }}
+{{ range $names }}
+  {{ if eq (lower (trim (printf "%v" .) " ")) $needle }}{{ $matched = true }}{{ end }}
+{{ end }}
+{{ return $matched }}

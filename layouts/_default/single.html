@@ -1,0 +1,36 @@
+{{ define "main" }}
+  {{ if eq .Params.type "landing" }}
+    {{ partial "landing-sections.html" . }}
+  {{ else if eq .Section "publication" }}
+    <article class="article wrap">
+      <header class="article-header">
+        <p class="eyebrow">Publication</p>
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.authors }}<p class="byline">{{ partial "authors/list.html" (dict "Authors" . "Page" $) }}</p>{{ end }}
+        <p class="publication-meta">
+          {{ with .Params.publication }}<span>{{ . | markdownify }}</span>{{ end }}
+          {{ with .Date }}<span>{{ .Format "2006" }}</span>{{ end }}
+          {{ with .Params.doi }}<a href="https://doi.org/{{ . }}">doi:{{ . }}</a>{{ end }}
+        </p>
+      </header>
+      {{ with .Params.abstract }}<section class="prose"><h2>Abstract</h2><p>{{ . }}</p></section>{{ end }}
+      <div class="prose">{{ .Content }}</div>
+      {{ partial "authors/bios.html" . }}
+    </article>
+  {{ else }}
+    <article class="article wrap">
+      <header class="article-header">
+        {{ if eq .Section "blog" }}
+          {{ with .Date }}<p class="eyebrow">{{ .Format "Jan 2, 2006" }}</p>{{ end }}
+        {{ else }}
+          <p class="eyebrow">{{ partial "section-label.html" .Section }}{{ with .Date }} · {{ .Format "Jan 2, 2006" }}{{ end }}</p>
+        {{ end }}
+        <h1>{{ .Title }}</h1>
+        {{ with .Params.authors }}<p class="byline">By {{ partial "authors/list.html" (dict "Authors" . "Page" $) }}</p>{{ end }}
+        {{ with .Resources.GetMatch "featured.*" }}<img class="article-featured" src="{{ .RelPermalink }}" alt="">{{ end }}
+      </header>
+      <div class="prose">{{ .Content }}</div>
+      {{ partial "authors/bios.html" . }}
+    </article>
+  {{ end }}
+{{ end }}

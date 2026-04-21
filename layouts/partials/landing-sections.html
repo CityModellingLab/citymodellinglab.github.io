@@ -1,0 +1,11 @@
+{{ range .Params.sections }}
+  {{ $block := .block | default "markdown" }}
+  {{ $partial := printf "blocks/%s.html" $block }}
+  {{ if eq $block "portfolio" }}
+    {{ partial "blocks/collection.html" (dict "Page" $ "Block" . "View" (.design.view | default "citation")) }}
+  {{ else if templates.Exists (printf "partials/%s" $partial) }}
+    {{ partial $partial (dict "Page" $ "Block" .) }}
+  {{ else }}
+    {{ partial "blocks/markdown.html" (dict "Page" $ "Block" .) }}
+  {{ end }}
+{{ end }}

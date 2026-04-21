@@ -17,8 +17,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  hugoblox:
-    if: github.repository_owner != 'HugoBlox'
+  import-publications:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the repo
@@ -59,7 +58,7 @@ jobs:
       #       [View Documentation](https://github.com/GetRD/academic-file-converter)
       #     base: main
       #     labels: automated-pr, content
-      #     branch: hugoblox-import-publications
+      #     branch: import-publications
       #     delete-branch: true
       # - name: Check outputs
       #   if: ${{ steps.cpr.outputs.pull-request-number }}

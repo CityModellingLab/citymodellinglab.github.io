@@ -1,0 +1,29 @@
+{{- $src := .Get 0 -}}
+{{- $resource := .Page.Resources.GetMatch $src -}}
+{{- if $resource -}}
+  {{- if not (.Page.Scratch.Get "plotly-json-loader") -}}
+    {{- .Page.Scratch.Set "plotly-json-loader" true -}}
+    <script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+    <script>
+      window.cmlRenderPlotlyJson = window.cmlRenderPlotlyJson || function (container) {
+        var src = container.getAttribute("data-plotly-src");
+        fetch(src)
+          .then(function (response) { return response.json(); })
+          .then(function (figure) {
+            var layout = figure.layout || {};
+            layout.autosize = true;
+            Plotly.newPlot(container, figure.data || [], layout, {
+              responsive: true,
+              displayModeBar: true
+            });
+          });
+      };
+      document.addEventListener("DOMContentLoaded", function () {
+        document.querySelectorAll("[data-plotly-src]").forEach(window.cmlRenderPlotlyJson);
+      });
+    </script>
+  {{- end -}}
+  <div class="plotly-json-figure" data-plotly-src="{{ $resource.RelPermalink }}"></div>
+{{- else -}}
+  <p><strong>Missing Plotly figure:</strong> {{ $src }}</p>
+{{- end -}}

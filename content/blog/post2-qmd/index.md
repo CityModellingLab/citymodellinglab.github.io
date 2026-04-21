@@ -2,50 +2,269 @@
 ### Required
 title: "Some other post rendered from .qmd"
 date: 2025-07-02
-authors: 
-
-summary: "The summary that will show up in the preview card"
-draft: true
+authors: # names must match names in content/authors for correct linkage
+# - Adam Dennett
+# - Roei Yosifof
+summary: The summary that will show up in the preview card
+draft: false
 featured: true
+format: hugo-md
+jupyter: python3
 
 ### Optional
 tags:
 - Council housing
 - London
 
-# Projects linkage
-projects: ["ntem"]
+# If the post is linked to any project under content/project/, add the folder's name(s), e.g. ['ai4ci','ntem']. Otherwise, leave blank.
+projects: ['ntem'] 
 
-# Collaterals
+# Add collaterals which will show up as clickable buttons on the post
 url_code: ''
 url_pdf: ''
 url_slides: ''
 url_video: 'https://www.youtube.com/watch?v=-2xD3C03HvI'
 ---
 
-<iframe id="quarto-report" src="/blog/post2-qmd/index_prerendered.html" width="100%" style="border:none; width: 100%; display: block;" scrolling="no"></iframe>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
-<script>
-  (function() {
-    const iframe = document.getElementById('quarto-report');
-    if (iframe) {
-      iframe.onload = function() {
-        // Initial Resize
-        const body = iframe.contentWindow.document.body;
-        const html = iframe.contentWindow.document.documentElement;
+
+You might have seen the [headlines in the past few weeks](https://www.theguardian.com/news/2025/apr/29/shelter-forecasts-rise-number-of-children-short-term-housing-2029-temporary-accommodation), about the crisis in council finances linked to the rising costs of providing temporary accommodation. In the UK local authorities have a "prevention duty", a statutory obligation to mitigate people becoming homeless. Historically, the typical state intervention would be to find suitable social housing in the local area. However, increasingly local authorities don't have enough social housing available, and are instead placing people in accommodation the council leases from the private sector. This accommodation can range from privately rented flats, to hotels or hostels. In 2024, over 80,000 people in the UK were assessed as being owed a prevention duty, leading to some areas spending over 20% of their total council budget on securing temporary accommodation; aggravating the finances of councils already on the [brink of bankruptcy](https://www.insidehousing.co.uk/news/south-east-council-on-brink-of-bankruptcy-over-massive-rise-in-homelessness-costs-82901).
+
+Aside from the financial cost, the type of shelter provided as temporary accommodation has been heavily criticised. Firstly, it is often not temporary, with people stuck in this accommodation limbo for years. Secondly, the accommodation is often not suitable for habitation, with notable examples lacking space, cooking facilities, or even [windows](https://news.sky.com/story/windowless-rooms-and-insect-infestations-domestic-abuse-victims-forced-to-live-in-traumatising-properties-12592101) making the news. This is perhaps particularly disturbing considering that in 2024, 25% of households owed a relief duty were families with children.
+
+<div style="width:100%;"><div style="position:relative;width:100%;height:0;padding-bottom:60%;"><span style="color:#565656">Make this Notebook Trusted to load map: File -> Trust Notebook</span><iframe srcdoc="&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    
+    &lt;meta http-equiv=&quot;content-type&quot; content=&quot;text/html; charset=UTF-8&quot; /&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://code.jquery.com/jquery-3.7.1.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js&quot;&gt;&lt;/script&gt;
+    &lt;script src=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js&quot;&gt;&lt;/script&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css&quot;/&gt;
+    &lt;link rel=&quot;stylesheet&quot; href=&quot;https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css&quot;/&gt;
+    
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no&quot; /&gt;
+            &lt;style&gt;
+                #map_1b8c85103e00e3d21e7d719fe9bb2ea8 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            &lt;/style&gt;
+
+            &lt;style&gt;html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            &lt;/style&gt;
+
+            &lt;style&gt;#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            &lt;/style&gt;
+
+            &lt;script&gt;
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            &lt;/script&gt;
+
         
-        const height = Math.max(
-            body.scrollHeight, body.offsetHeight, 
-            html.clientHeight, html.scrollHeight, html.offsetHeight
-        );
-        iframe.style.height = height + 'px';
+    
+                    &lt;style&gt;
+                        .foliumtooltip {
+                            
+                        }
+                       .foliumtooltip table{
+                            margin: auto;
+                        }
+                        .foliumtooltip tr{
+                            text-align: left;
+                        }
+                        .foliumtooltip th{
+                            padding: 2px; padding-right: 8px;
+                        }
+                    &lt;/style&gt;
+            
+&lt;/head&gt;
+&lt;body&gt;
+    
+    
+            &lt;div class=&quot;folium-map&quot; id=&quot;map_1b8c85103e00e3d21e7d719fe9bb2ea8&quot; &gt;&lt;/div&gt;
+        
+&lt;/body&gt;
+&lt;script&gt;
+    
+    
+            var map_1b8c85103e00e3d21e7d719fe9bb2ea8 = L.map(
+                &quot;map_1b8c85103e00e3d21e7d719fe9bb2ea8&quot;,
+                {
+                    center: [51.50050279692499, -0.10002567091639467],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  &quot;zoom&quot;: 10,
+  &quot;zoomControl&quot;: true,
+  &quot;preferCanvas&quot;: false,
+}
 
-        // Continuous Resize (for interactive elements)
-        const resizeObserver = new ResizeObserver(() => {
-           iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
+                }
+            );
+            L.control.scale().addTo(map_1b8c85103e00e3d21e7d719fe9bb2ea8);
+
+            
+
+        
+    
+            var tile_layer_ca34ad278037c1a3466d292e276ec39a = L.tileLayer(
+                &quot;https://tile.openstreetmap.org/{z}/{x}/{y}.png&quot;,
+                {
+  &quot;minZoom&quot;: 0,
+  &quot;maxZoom&quot;: 19,
+  &quot;maxNativeZoom&quot;: 19,
+  &quot;noWrap&quot;: false,
+  &quot;attribution&quot;: &quot;\u0026copy; \u003ca href=\&quot;https://www.openstreetmap.org/copyright\&quot;\u003eOpenStreetMap\u003c/a\u003e contributors&quot;,
+  &quot;subdomains&quot;: &quot;abc&quot;,
+  &quot;detectRetina&quot;: false,
+  &quot;tms&quot;: false,
+  &quot;opacity&quot;: 1,
+}
+
+            );
+        
+    
+            tile_layer_ca34ad278037c1a3466d292e276ec39a.addTo(map_1b8c85103e00e3d21e7d719fe9bb2ea8);
+        
+    
+            map_1b8c85103e00e3d21e7d719fe9bb2ea8.fitBounds(
+                [[51.30149411883762, -0.48725757170781514], [51.69951147501237, 0.2872062298750258]],
+                {}
+            );
+        
+    
+        function geo_json_811e50569fee02b34f6cc75a58ae89f6_styler(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;fillOpacity&quot;: 0.5, &quot;weight&quot;: 2};
+            }
+        }
+        function geo_json_811e50569fee02b34f6cc75a58ae89f6_highlighter(feature) {
+            switch(feature.id) {
+                default:
+                    return {&quot;fillOpacity&quot;: 0.75};
+            }
+        }
+        function geo_json_811e50569fee02b34f6cc75a58ae89f6_pointToLayer(feature, latlng) {
+            var opts = {
+  &quot;stroke&quot;: true,
+  &quot;color&quot;: &quot;#3388ff&quot;,
+  &quot;weight&quot;: 3,
+  &quot;opacity&quot;: 1.0,
+  &quot;lineCap&quot;: &quot;round&quot;,
+  &quot;lineJoin&quot;: &quot;round&quot;,
+  &quot;dashArray&quot;: null,
+  &quot;dashOffset&quot;: null,
+  &quot;fill&quot;: true,
+  &quot;fillColor&quot;: &quot;#3388ff&quot;,
+  &quot;fillOpacity&quot;: 0.2,
+  &quot;fillRule&quot;: &quot;evenodd&quot;,
+  &quot;bubblingMouseEvents&quot;: true,
+  &quot;radius&quot;: 2,
+};
+            
+            let style = geo_json_811e50569fee02b34f6cc75a58ae89f6_styler(feature)
+            Object.assign(opts, style)
+            
+            return new L.CircleMarker(latlng, opts)
+        }
+
+        function geo_json_811e50569fee02b34f6cc75a58ae89f6_onEachFeature(feature, layer) {
+
+            layer.on({
+                mouseout: function(e) {
+                    if(typeof e.target.setStyle === &quot;function&quot;){
+                            geo_json_811e50569fee02b34f6cc75a58ae89f6.resetStyle(e.target);
+                    }
+                },
+                mouseover: function(e) {
+                    if(typeof e.target.setStyle === &quot;function&quot;){
+                        const highlightStyle = geo_json_811e50569fee02b34f6cc75a58ae89f6_highlighter(e.target.feature)
+                        e.target.setStyle(highlightStyle);
+                    }
+                },
+            });
+        };
+        var geo_json_811e50569fee02b34f6cc75a58ae89f6 = L.geoJson(null, {
+                onEachFeature: geo_json_811e50569fee02b34f6cc75a58ae89f6_onEachFeature,
+            
+                style: geo_json_811e50569fee02b34f6cc75a58ae89f6_styler,
+                pointToLayer: geo_json_811e50569fee02b34f6cc75a58ae89f6_pointToLayer,
+            ...{
+}
         });
-        resizeObserver.observe(iframe.contentWindow.document.body);
-      };
+
+        function geo_json_811e50569fee02b34f6cc75a58ae89f6_add (data) {
+            geo_json_811e50569fee02b34f6cc75a58ae89f6
+                .addData(data);
+        }
+            geo_json_811e50569fee02b34f6cc75a58ae89f6_add({&quot;bbox&quot;: [-0.48725757170781514, 51.30149411883762, 0.2872062298750258, 51.69951147501237], &quot;features&quot;: [{&quot;bbox&quot;: [-0.27322468277935086, 51.53368114431263, -0.27322468277935086, 51.53368114431263], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.27322468277935086, 51.53368114431263], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;0&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.533681144312645, &quot;longitude&quot;: -0.27322468277935086}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.3478300270706879, 51.46898494196891, -0.3478300270706879, 51.46898494196891], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.3478300270706879, 51.46898494196891], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;1&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.46898494196891, &quot;longitude&quot;: -0.3478300270706879}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.38822397537414816, 51.36808253544552, -0.38822397537414816, 51.36808253544552], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.38822397537414816, 51.36808253544552], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;2&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.36808253544552, &quot;longitude&quot;: -0.3882239753741482}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.47200335272014576, 51.54999823016387, -0.47200335272014576, 51.54999823016387], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.47200335272014576, 51.54999823016387], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;3&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.54999823016389, &quot;longitude&quot;: -0.47200335272014576}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.4573574332539024, 51.36694815195738, -0.4573574332539024, 51.36694815195738], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.4573574332539024, 51.36694815195738], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;4&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.36694815195739, &quot;longitude&quot;: -0.4573574332539024}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.010488837251434513, 51.592173663637716, -0.010488837251434513, 51.592173663637716], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.010488837251434513, 51.592173663637716], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;5&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.59217366363773, &quot;longitude&quot;: -0.010488837251434513}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.054561474328153614, 51.349482344587244, 0.054561474328153614, 51.349482344587244], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.054561474328153614, 51.349482344587244], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;6&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.34948234458725, &quot;longitude&quot;: 0.054561474328153614}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.4297785211254052, 51.61790735205002, -0.4297785211254052, 51.61790735205002], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.4297785211254052, 51.61790735205002], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;7&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.61790735205001, &quot;longitude&quot;: -0.42977852112540527}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.13096109720695093, 51.52934245731951, 0.13096109720695093, 51.52934245731951], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.13096109720695093, 51.52934245731951], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;8&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.52934245731951, &quot;longitude&quot;: 0.13096109720695093}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.3969382808838152, 51.66556274830335, -0.3969382808838152, 51.66556274830335], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.3969382808838152, 51.66556274830335], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;9&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.66556274830335, &quot;longitude&quot;: -0.3969382808838152}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.4216684586415024, 51.550464109852776, -0.4216684586415024, 51.550464109852776], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.4216684586415024, 51.550464109852776], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;10&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.55046410985277, &quot;longitude&quot;: -0.4216684586415024}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.0947616777739192, 51.46615811629539, -0.0947616777739192, 51.46615811629539], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.0947616777739192, 51.46615811629539], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;11&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.466158116295404, &quot;longitude&quot;: -0.0947616777739192}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.2548644629516187, 51.41566602325029, 0.2548644629516187, 51.41566602325029], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.2548644629516187, 51.41566602325029], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;12&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.41566602325029, &quot;longitude&quot;: 0.2548644629516187}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.10462786249526923, 51.38049909737247, -0.10462786249526923, 51.38049909737247], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.10462786249526923, 51.38049909737247], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;13&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.38049909737248, &quot;longitude&quot;: -0.10462786249526923}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.2850148517712785, 51.39492389621288, -0.2850148517712785, 51.39492389621288], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.2850148517712785, 51.39492389621288], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;14&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.39492389621288, &quot;longitude&quot;: -0.2850148517712785}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.04196736942210632, 51.69951147501237, -0.04196736942210632, 51.69951147501237], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.04196736942210632, 51.69951147501237], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;15&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.699511475012365, &quot;longitude&quot;: -0.041967369422106326}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.24686464558434731, 51.3539228420324, 0.24686464558434731, 51.3539228420324], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.24686464558434731, 51.3539228420324], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;16&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.35392284203241, &quot;longitude&quot;: 0.2468646455843473}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.21594994791831912, 51.65145656868212, 0.21594994791831912, 51.65145656868212], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.21594994791831912, 51.65145656868212], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;17&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.65145656868212, &quot;longitude&quot;: 0.21594994791831912}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.0031743472911771593, 51.6985992599127, -0.0031743472911771593, 51.6985992599127], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.0031743472911771593, 51.6985992599127], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;18&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.6985992599127, &quot;longitude&quot;: -0.0031743472911771597}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.3315381889912206, 51.55444639497352, -0.3315381889912206, 51.55444639497352], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.3315381889912206, 51.55444639497352], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;19&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.55444639497352, &quot;longitude&quot;: -0.3315381889912207}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.02704591236950249, 51.52481987845805, 0.02704591236950249, 51.52481987845805], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.02704591236950249, 51.52481987845805], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;20&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.52481987845805, &quot;longitude&quot;: 0.02704591236950249}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.3055336289566558, 51.39731656863654, -0.3055336289566558, 51.39731656863654], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.3055336289566558, 51.39731656863654], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;21&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.39731656863655, &quot;longitude&quot;: -0.3055336289566558}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.48018105112474885, 51.55555356316683, -0.48018105112474885, 51.55555356316683], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.48018105112474885, 51.55555356316683], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;22&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.55555356316684, &quot;longitude&quot;: -0.48018105112474885}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.030557640515502357, 51.59906372275839, -0.030557640515502357, 51.59906372275839], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.030557640515502357, 51.59906372275839], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;23&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.59906372275838, &quot;longitude&quot;: -0.03055764051550236}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.4471421571520047, 51.52771081467494, -0.4471421571520047, 51.52771081467494], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.4471421571520047, 51.52771081467494], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;24&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.52771081467494, &quot;longitude&quot;: -0.4471421571520048}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.22574718986145606, 51.52608381245702, -0.22574718986145606, 51.52608381245702], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.22574718986145606, 51.52608381245702], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;25&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.52608381245701, &quot;longitude&quot;: -0.22574718986145603}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.08386598870032913, 51.38531975500301, 0.08386598870032913, 51.38531975500301], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.08386598870032913, 51.38531975500301], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;26&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.385319755003, &quot;longitude&quot;: 0.08386598870032913}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.2586071715208502, 51.52483108507716, 0.2586071715208502, 51.52483108507716], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.2586071715208502, 51.52483108507716], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;27&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.52483108507717, &quot;longitude&quot;: 0.2586071715208502}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.19931625053442567, 51.30149411883762, 0.19931625053442567, 51.30149411883762], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.19931625053442567, 51.30149411883762], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;28&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.30149411883762, &quot;longitude&quot;: 0.1993162505344257}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.1940460163781492, 51.491697361768, -0.1940460163781492, 51.491697361768], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.1940460163781492, 51.491697361768], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;29&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.491697361768, &quot;longitude&quot;: -0.19404601637814922}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.16909791486989775, 51.50265840144014, 0.16909791486989775, 51.50265840144014], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.16909791486989775, 51.50265840144014], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;30&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.502658401440144, &quot;longitude&quot;: 0.16909791486989778}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.20225537014648, 51.688192548814555, -0.20225537014648, 51.688192548814555], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.20225537014648, 51.688192548814555], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;31&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.688192548814555, &quot;longitude&quot;: -0.20225537014648004}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.10895502743377117, 51.406458126938304, 0.10895502743377117, 51.406458126938304], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.10895502743377117, 51.406458126938304], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;32&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.406458126938304, &quot;longitude&quot;: 0.10895502743377117}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.13368308113843208, 51.39197812122177, 0.13368308113843208, 51.39197812122177], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.13368308113843208, 51.39197812122177], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;33&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.39197812122176, &quot;longitude&quot;: 0.13368308113843208}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.2446635759387892, 51.36023285405982, 0.2446635759387892, 51.36023285405982], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.2446635759387892, 51.36023285405982], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;34&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.36023285405982, &quot;longitude&quot;: 0.24466357593878918}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.12092800108672108, 51.57966629538203, 0.12092800108672108, 51.57966629538203], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.12092800108672108, 51.57966629538203], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;35&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.57966629538203, &quot;longitude&quot;: 0.12092800108672108}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.24824372779726492, 51.45369928345814, 0.24824372779726492, 51.45369928345814], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.24824372779726492, 51.45369928345814], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;36&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.45369928345816, &quot;longitude&quot;: 0.2482437277972649}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.2393385865912037, 51.47015687224695, -0.2393385865912037, 51.47015687224695], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.2393385865912037, 51.47015687224695], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;37&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.47015687224695, &quot;longitude&quot;: -0.23933858659120372}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.184109102623225, 51.34976714294498, 0.184109102623225, 51.34976714294498], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.184109102623225, 51.34976714294498], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;38&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.349767142944984, &quot;longitude&quot;: 0.184109102623225}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.2680758366744649, 51.41468306304721, -0.2680758366744649, 51.41468306304721], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.2680758366744649, 51.41468306304721], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;39&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.4146830630472, &quot;longitude&quot;: -0.2680758366744649}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.47806156738525446, 51.42352083865171, -0.47806156738525446, 51.42352083865171], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.47806156738525446, 51.42352083865171], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;40&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.42352083865171, &quot;longitude&quot;: -0.4780615673852545}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.3440503068662265, 51.347597900651515, -0.3440503068662265, 51.347597900651515], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.3440503068662265, 51.347597900651515], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;41&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.34759790065152, &quot;longitude&quot;: -0.3440503068662265}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.07062273364132132, 51.352497380522934, 0.07062273364132132, 51.352497380522934], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.07062273364132132, 51.352497380522934], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;42&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.35249738052294, &quot;longitude&quot;: 0.07062273364132132}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.015744456798294282, 51.535975679569276, 0.015744456798294282, 51.535975679569276], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.015744456798294282, 51.535975679569276], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;43&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.53597567956928, &quot;longitude&quot;: 0.015744456798294282}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.08961141372394531, 51.61818609854683, 0.08961141372394531, 51.61818609854683], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.08961141372394531, 51.61818609854683], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;44&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.618186098546836, &quot;longitude&quot;: 0.08961141372394532}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.22741491894806992, 51.63148851195072, 0.22741491894806992, 51.63148851195072], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.22741491894806992, 51.63148851195072], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;45&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.631488511950714, &quot;longitude&quot;: 0.22741491894806998}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.3987487969239252, 51.35933850715895, -0.3987487969239252, 51.35933850715895], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.3987487969239252, 51.35933850715895], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;46&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.35933850715895, &quot;longitude&quot;: -0.39874879692392523}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.08541460584880177, 51.35253219178666, 0.08541460584880177, 51.35253219178666], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.08541460584880177, 51.35253219178666], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;47&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.35253219178666, &quot;longitude&quot;: 0.08541460584880178}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.2777159010722649, 51.45274299008001, 0.2777159010722649, 51.45274299008001], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.2777159010722649, 51.45274299008001], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;48&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.452742990080004, &quot;longitude&quot;: 0.27771590107226496}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.15725055625262108, 51.42611173559396, -0.15725055625262108, 51.42611173559396], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.15725055625262108, 51.42611173559396], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;49&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.42611173559398, &quot;longitude&quot;: -0.15725055625262108}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.24905138431649207, 51.54176158092833, -0.24905138431649207, 51.54176158092833], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.24905138431649207, 51.54176158092833], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;50&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.54176158092833, &quot;longitude&quot;: -0.2490513843164921}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.06520184183615485, 51.57643194127198, -0.06520184183615485, 51.57643194127198], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.06520184183615485, 51.57643194127198], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;51&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.57643194127198, &quot;longitude&quot;: -0.06520184183615485}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.15401306694895245, 51.44344979950602, -0.15401306694895245, 51.44344979950602], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.15401306694895245, 51.44344979950602], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;52&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.44344979950602, &quot;longitude&quot;: -0.15401306694895245}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.3198307176966026, 51.55910485890557, -0.3198307176966026, 51.55910485890557], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.3198307176966026, 51.55910485890557], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;53&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.55910485890558, &quot;longitude&quot;: -0.31983071769660254}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.17906205701217792, 51.55640372363805, -0.17906205701217792, 51.55640372363805], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.17906205701217792, 51.55640372363805], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;54&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.55640372363805, &quot;longitude&quot;: -0.17906205701217792}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.48725757170781514, 51.402883170470616, -0.48725757170781514, 51.402883170470616], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.48725757170781514, 51.402883170470616], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;55&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.40288317047061, &quot;longitude&quot;: -0.4872575717078152}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.47198111583840524, 51.35364851883798, -0.47198111583840524, 51.35364851883798], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.47198111583840524, 51.35364851883798], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;56&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.35364851883798, &quot;longitude&quot;: -0.47198111583840524}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.2768682213444011, 51.53349496113953, -0.2768682213444011, 51.53349496113953], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.2768682213444011, 51.53349496113953], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;57&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.53349496113954, &quot;longitude&quot;: -0.27686822134440103}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.2049728242777524, 51.492700743050385, 0.2049728242777524, 51.492700743050385], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.2049728242777524, 51.492700743050385], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;58&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.492700743050385, &quot;longitude&quot;: 0.20497282427775243}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.18875415828278386, 51.34235763992841, 0.18875415828278386, 51.34235763992841], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.18875415828278386, 51.34235763992841], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;59&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.34235763992841, &quot;longitude&quot;: 0.18875415828278386}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.26162879273701417, 51.574808507208715, 0.26162879273701417, 51.574808507208715], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.26162879273701417, 51.574808507208715], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;60&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.574808507208715, &quot;longitude&quot;: 0.2616287927370142}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.08964612879210336, 51.37116711949519, -0.08964612879210336, 51.37116711949519], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.08964612879210336, 51.37116711949519], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;61&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.3711671194952, &quot;longitude&quot;: -0.08964612879210337}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.06740605803026378, 51.58660645295365, -0.06740605803026378, 51.58660645295365], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.06740605803026378, 51.58660645295365], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;62&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.58660645295365, &quot;longitude&quot;: -0.06740605803026378}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.3917840349128975, 51.52414184238192, -0.3917840349128975, 51.52414184238192], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.3917840349128975, 51.52414184238192], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;63&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.52414184238193, &quot;longitude&quot;: -0.3917840349128975}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.41010431746225795, 51.434221858861164, -0.41010431746225795, 51.434221858861164], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.41010431746225795, 51.434221858861164], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;64&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.43422185886116, &quot;longitude&quot;: -0.41010431746225795}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.024183755219075172, 51.53089484884517, -0.024183755219075172, 51.53089484884517], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.024183755219075172, 51.53089484884517], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;65&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.53089484884517, &quot;longitude&quot;: -0.024183755219075176}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.2009000421861623, 51.592668905949, -0.2009000421861623, 51.592668905949], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.2009000421861623, 51.592668905949], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;66&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.592668905949004, &quot;longitude&quot;: -0.2009000421861623}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.4643441408311447, 51.42069898518851, -0.4643441408311447, 51.42069898518851], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.4643441408311447, 51.42069898518851], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;67&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.420698985188515, &quot;longitude&quot;: -0.4643441408311448}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.2872062298750258, 51.32856628372913, 0.2872062298750258, 51.32856628372913], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.2872062298750258, 51.32856628372913], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;68&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.32856628372913, &quot;longitude&quot;: 0.28720622987502586}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.034848431238843125, 51.40272434538435, -0.034848431238843125, 51.40272434538435], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.034848431238843125, 51.40272434538435], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;69&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.40272434538436, &quot;longitude&quot;: -0.034848431238843125}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.14379089783246846, 51.386540912298415, 0.14379089783246846, 51.386540912298415], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.14379089783246846, 51.386540912298415], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;70&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.38654091229841, &quot;longitude&quot;: 0.14379089783246846}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.11949364326739251, 51.31020281018399, 0.11949364326739251, 51.31020281018399], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.11949364326739251, 51.31020281018399], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;71&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.31020281018399, &quot;longitude&quot;: 0.11949364326739254}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.16104900206401362, 51.64959314944745, 0.16104900206401362, 51.64959314944745], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.16104900206401362, 51.64959314944745], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;72&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.64959314944745, &quot;longitude&quot;: 0.16104900206401362}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.45113568723266056, 51.43117053285069, -0.45113568723266056, 51.43117053285069], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.45113568723266056, 51.43117053285069], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;73&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.4311705328507, &quot;longitude&quot;: -0.45113568723266056}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.19946925767738508, 51.52817130193215, -0.19946925767738508, 51.52817130193215], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.19946925767738508, 51.52817130193215], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;74&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.52817130193215, &quot;longitude&quot;: -0.1994692576773851}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.40510243506377547, 51.62029735051037, -0.40510243506377547, 51.62029735051037], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.40510243506377547, 51.62029735051037], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;75&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.62029735051038, &quot;longitude&quot;: -0.4051024350637755}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.0974816288864969, 51.59517461388387, 0.0974816288864969, 51.59517461388387], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.0974816288864969, 51.59517461388387], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;76&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.59517461388387, &quot;longitude&quot;: 0.09748162888649692}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.14148215369521375, 51.6173181782397, 0.14148215369521375, 51.6173181782397], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.14148215369521375, 51.6173181782397], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;77&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.6173181782397, &quot;longitude&quot;: 0.14148215369521377}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.36258505104444627, 51.40264493973713, -0.36258505104444627, 51.40264493973713], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.36258505104444627, 51.40264493973713], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;78&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.40264493973712, &quot;longitude&quot;: -0.36258505104444627}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.246318530839227, 51.68119449463696, -0.246318530839227, 51.68119449463696], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.246318530839227, 51.68119449463696], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;79&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.68119449463696, &quot;longitude&quot;: -0.246318530839227}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.16286724813120898, 51.38642155002035, 0.16286724813120898, 51.38642155002035], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.16286724813120898, 51.38642155002035], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;80&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.386421550020344, &quot;longitude&quot;: 0.162867248131209}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.20472493324105245, 51.661621596954724, 0.20472493324105245, 51.661621596954724], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.20472493324105245, 51.661621596954724], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;81&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.66162159695473, &quot;longitude&quot;: 0.20472493324105245}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.3232217254935448, 51.482602900901576, -0.3232217254935448, 51.482602900901576], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.3232217254935448, 51.482602900901576], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;82&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.48260290090157, &quot;longitude&quot;: -0.3232217254935448}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.1431643330607943, 51.639437580572356, -0.1431643330607943, 51.639437580572356], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.1431643330607943, 51.639437580572356], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;83&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.639437580572356, &quot;longitude&quot;: -0.1431643330607943}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.11281462351299403, 51.3235539791595, -0.11281462351299403, 51.3235539791595], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.11281462351299403, 51.3235539791595], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;84&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.3235539791595, &quot;longitude&quot;: -0.11281462351299404}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.08597679492910958, 51.416707209322205, 0.08597679492910958, 51.416707209322205], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.08597679492910958, 51.416707209322205], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;85&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.416707209322205, &quot;longitude&quot;: 0.08597679492910959}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.07196190887990993, 51.369349650680064, 0.07196190887990993, 51.369349650680064], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.07196190887990993, 51.369349650680064], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;86&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.36934965068006, &quot;longitude&quot;: 0.07196190887990994}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.1762288399750106, 51.42641036061726, 0.1762288399750106, 51.42641036061726], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.1762288399750106, 51.42641036061726], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;87&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.42641036061727, &quot;longitude&quot;: 0.1762288399750106}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.3767347620272111, 51.64572891790974, -0.3767347620272111, 51.64572891790974], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.3767347620272111, 51.64572891790974], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;88&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.64572891790974, &quot;longitude&quot;: -0.3767347620272112}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.03563515939181694, 51.55508618844417, 0.03563515939181694, 51.55508618844417], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.03563515939181694, 51.55508618844417], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;89&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.55508618844418, &quot;longitude&quot;: 0.03563515939181694}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.24263647062372726, 51.51379942037209, -0.24263647062372726, 51.51379942037209], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.24263647062372726, 51.51379942037209], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;90&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.51379942037208, &quot;longitude&quot;: -0.24263647062372723}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.1593094983369739, 51.61721769690159, -0.1593094983369739, 51.61721769690159], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.1593094983369739, 51.61721769690159], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;91&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.6172176969016, &quot;longitude&quot;: -0.1593094983369739}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.06201196065289683, 51.53630916438955, 0.06201196065289683, 51.53630916438955], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.06201196065289683, 51.53630916438955], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;92&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.536309164389564, &quot;longitude&quot;: 0.062011960652896825}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.03301840980270365, 51.6227535512954, 0.03301840980270365, 51.6227535512954], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.03301840980270365, 51.6227535512954], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;93&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.62275355129541, &quot;longitude&quot;: 0.03301840980270365}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.2026558393498171, 51.603002736682456, 0.2026558393498171, 51.603002736682456], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.2026558393498171, 51.603002736682456], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;94&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.60300273668247, &quot;longitude&quot;: 0.20265583934981712}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.22645835445559293, 51.65318375957559, -0.22645835445559293, 51.65318375957559], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.22645835445559293, 51.65318375957559], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;95&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.65318375957559, &quot;longitude&quot;: -0.22645835445559293}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.11757785641267517, 51.352308418127265, 0.11757785641267517, 51.352308418127265], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.11757785641267517, 51.352308418127265], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;96&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.352308418127265, &quot;longitude&quot;: 0.11757785641267515}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.1855521063778024, 51.436057673972925, 0.1855521063778024, 51.436057673972925], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.1855521063778024, 51.436057673972925], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;97&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.43605767397293, &quot;longitude&quot;: 0.1855521063778024}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [-0.13414297602385988, 51.68194197660049, -0.13414297602385988, 51.68194197660049], &quot;geometry&quot;: {&quot;coordinates&quot;: [-0.13414297602385988, 51.68194197660049], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;98&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.68194197660049, &quot;longitude&quot;: -0.13414297602385988}, &quot;type&quot;: &quot;Feature&quot;}, {&quot;bbox&quot;: [0.19693093946604945, 51.410424424248404, 0.19693093946604945, 51.410424424248404], &quot;geometry&quot;: {&quot;coordinates&quot;: [0.19693093946604945, 51.410424424248404], &quot;type&quot;: &quot;Point&quot;}, &quot;id&quot;: &quot;99&quot;, &quot;properties&quot;: {&quot;latitude&quot;: 51.410424424248404, &quot;longitude&quot;: 0.19693093946604945}, &quot;type&quot;: &quot;Feature&quot;}], &quot;type&quot;: &quot;FeatureCollection&quot;});
+
+        
+    
+    geo_json_811e50569fee02b34f6cc75a58ae89f6.bindTooltip(
+    function(layer){
+    let div = L.DomUtil.create(&#x27;div&#x27;);
+    
+    let handleObject = feature =&gt; {
+        if (feature === null) {
+            return &#x27;&#x27;;
+        } else if (typeof(feature)==&#x27;object&#x27;) {
+            return JSON.stringify(feature);
+        } else {
+            return feature;
+        }
     }
-  })();
-</script>
+    let fields = [&quot;latitude&quot;, &quot;longitude&quot;];
+    let aliases = [&quot;latitude&quot;, &quot;longitude&quot;];
+    let table = &#x27;&lt;table&gt;&#x27; +
+        String(
+        fields.map(
+        (v,i)=&gt;
+        `&lt;tr&gt;
+            &lt;th&gt;${aliases[i]}&lt;/th&gt;
+            
+            &lt;td&gt;${handleObject(layer.feature.properties[v])}&lt;/td&gt;
+        &lt;/tr&gt;`).join(&#x27;&#x27;))
+    +&#x27;&lt;/table&gt;&#x27;;
+    div.innerHTML=table;
+    
+    return div
+    }
+    ,{
+  &quot;sticky&quot;: true,
+  &quot;className&quot;: &quot;foliumtooltip&quot;,
+});
+                     
+    
+            geo_json_811e50569fee02b34f6cc75a58ae89f6.addTo(map_1b8c85103e00e3d21e7d719fe9bb2ea8);
+        
+&lt;/script&gt;
+&lt;/html&gt;" style="position:absolute;width:100%;height:100%;left:0;top:0;border:none !important;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe></div></div>
+
+You can write your post about anything here, accompanied by codeblocks, and images or other outputs. It can also handle interactive outputs like above.

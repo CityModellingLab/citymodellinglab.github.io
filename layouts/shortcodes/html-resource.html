@@ -1,0 +1,9 @@
+{{- $src := .Get "src" | default (.Get 0) -}}
+{{- $height := .Get "height" | default "560" -}}
+{{- $url := $src | relURL -}}
+<iframe
+  class="html-widget-frame"
+  src="{{ $url }}"
+  title="{{ $src }}"
+  loading="lazy"
+  height="{{ $height }}"></iframe>

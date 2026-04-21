@@ -6,7 +6,7 @@ authors: # names must match names in content/authors for correct linkage
 # - Adam Dennett
 # - Roei Yosifof
 summary: The summary that will show up in the preview card
-draft: true
+draft: false
 featured: true
 
 ### Optional
@@ -33,7 +33,7 @@ Aside from the financial cost, the type of shelter provided as temporary accommo
 
 
 ```{python}
-#| 
+#| echo: false
 import pandas as pd
 import geopandas as gpd
 import numpy as np

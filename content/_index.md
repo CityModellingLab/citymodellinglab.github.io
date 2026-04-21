@@ -28,7 +28,7 @@ sections:
   - block: markdown
     content:
       text: |
-        <div style="display:flex; gap:80px; justify-content:center; align-items:center; flex-wrap:wrap; padding: 0px 0;">
+        <div style="display:flex; gap:80px; justify-content:center; align-items:center; flex-wrap:nowrap; padding: 0px 0;">
           <a href="https://www.arup.com/services/city-modelling-lab/">
             <img src="home/arup-logo.png" alt="Arup" style="height: 80px; max-width: 100%;">
           </a>
@@ -124,25 +124,6 @@ sections:
       view: card
       columns: '2'
   
-  - block: markdown
-    content:
-      title:
-      subtitle: 
-      text:
-    design:
-      columns: '1'
-      background:
-        image: 
-          filename: welcome.jpg
-          filters:
-            brightness: 0.5
-          parallax: true
-          position: center
-          size: 
-          text_color_light: true
-      spacing:
-        padding: ['150px', '0', '150px', '0']
-
   - block: collection
     content:
       title: Latest Publications

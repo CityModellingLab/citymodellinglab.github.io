@@ -1,0 +1,2 @@
+{{ $authors := .Authors }}
+{{ range $i, $author := $authors }}{{ if $i }}, {{ end }}{{ partial "authors/link.html" $author }}{{ end }}

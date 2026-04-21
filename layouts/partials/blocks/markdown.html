@@ -1,0 +1,10 @@
+{{ $block := .Block }}
+{{ $style := "" }}
+{{ with $block.design.background.color }}{{ $style = printf "--section-bg:%s;" . }}{{ end }}
+<section class="content-band"{{ with $style }} style="{{ . | safeCSS }}"{{ end }}>
+  <div class="wrap prose">
+    {{ with $block.content.title }}<h2>{{ . }}</h2>{{ end }}
+    {{ with $block.content.subtitle }}<p class="section-subtitle">{{ . }}</p>{{ end }}
+    {{ with $block.content.text }}{{ . | markdownify }}{{ end }}
+  </div>
+</section>

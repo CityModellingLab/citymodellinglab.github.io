@@ -1,6 +1,8 @@
 ---
 # Display name
 title: Tom Murat
+author_aliases:
+  - Thomas Murat
 
 # Full Name (for SEO)
 first_name: Tom

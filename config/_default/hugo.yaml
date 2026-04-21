@@ -33,7 +33,7 @@ permalinks:
   publication_types: '/publication-type/:slug/'
 disableAliases: true
 outputs:
-  home: [HTML, RSS, JSON, WebAppManifest]
+  home: [HTML, RSS]
   section: [HTML, RSS]
 imaging:
   resampleFilter: Lanczos

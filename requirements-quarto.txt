@@ -1,0 +1,11 @@
+contextily
+folium
+geopandas
+ipykernel
+jupyter
+mapclassify
+matplotlib
+nbformat
+numpy
+pandas
+plotly

@@ -1,0 +1,11 @@
+<footer class="site-footer">
+  <div>
+    <strong>{{ site.Title }}</strong>
+    <p>{{ replace (site.Params.footer.copyright.notice | default "Copyright {year}. All rights reserved.") "{year}" now.Year }}</p>
+  </div>
+  <nav aria-label="Footer navigation">
+    {{ range site.Menus.main }}
+      <a href="{{ .URL | relURL }}">{{ .Name }}</a>
+    {{ end }}
+  </nav>
+</footer>

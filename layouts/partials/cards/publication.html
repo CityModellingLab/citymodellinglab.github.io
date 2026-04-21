@@ -1,0 +1,12 @@
+<article class="publication-item">
+  <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+  {{ with .Params.authors }}
+    <p class="byline">{{ partial "authors/list.html" (dict "Authors" . "Page" $) }}</p>
+  {{ end }}
+  <p class="publication-meta">
+    {{ with .Params.publication }}<span>{{ . | markdownify }}</span>{{ end }}
+    {{ with .Date }}<span>{{ .Format "2006" }}</span>{{ end }}
+    {{ with .Params.doi }}<a href="https://doi.org/{{ . }}">doi:{{ . }}</a>{{ end }}
+  </p>
+  {{ with .Params.abstract }}<p>{{ . | plainify | truncate 220 }}</p>{{ end }}
+</article>

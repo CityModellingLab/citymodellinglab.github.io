@@ -83,7 +83,7 @@ features:
       category: ''
       category_id: ''
   search:
-    provider: wowchemy
+    provider: ''
   map:
     provider: 'mapbox'
     api_key: ''

@@ -3,9 +3,10 @@
 title: "A post rendered from Markdown (.md)"
 date: 2025-10-02
 authors: 
-
+# - Claude Lynch
+# - Esra Suel
 summary: "The summary that will show up in the preview card"
-draft: true
+draft: false
 featured: true
 
 ### Optional
@@ -23,29 +24,10 @@ url_slides: 'https://adamdennett.github.io/AUM2024/AUM2024Presentation.html'
 url_video: 'https://www.youtube.com/watch?v=JrhGCrtiXNw'
 ---
 
-<iframe id="quarto-report" src="/blog/post1-md/index_prerendered.html" width="100%" style="border:none; width: 100%; display: block;" scrolling="no"></iframe>
+Content in Markdown, rendered directly by Hugo.
 
-<script>
-  (function() {
-    const iframe = document.getElementById('quarto-report');
-    if (iframe) {
-      iframe.onload = function() {
-        // Initial Resize
-        const body = iframe.contentWindow.document.body;
-        const html = iframe.contentWindow.document.documentElement;
-        
-        const height = Math.max(
-            body.scrollHeight, body.offsetHeight, 
-            html.clientHeight, html.scrollHeight, html.offsetHeight
-        );
-        iframe.style.height = height + 'px';
+## Hello world!
 
-        // Continuous Resize (for interactive elements)
-        const resizeObserver = new ResizeObserver(() => {
-           iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-        });
-        resizeObserver.observe(iframe.contentWindow.document.body);
-      };
-    }
-  })();
-</script>
+This is where you showcase your great analysis. Markdown images render directly in Hugo when the final post is saved as `index.md`.
+
+![Example bundled image](featured.jpg)

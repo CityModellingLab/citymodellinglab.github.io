@@ -1,0 +1,18 @@
+{{ $block := .Block }}
+{{ $authors := where site.Pages "Section" "authors" }}
+{{ $authors = where $authors "Title" "!=" "" }}
+{{ with $block.content.user_groups }}
+  {{ $groups := . }}
+  {{ $authors = where $authors "Params.user_groups" "intersect" $groups }}
+{{ end }}
+{{ $authors = sort $authors "Params.last_name" "asc" }}
+<section class="content-band">
+  <div class="wrap">
+    {{ with $block.content.title }}<h2>{{ . }}</h2>{{ end }}
+    <div class="people-grid">
+      {{ range $authors }}
+        {{ partial "cards/author.html" . }}
+      {{ end }}
+    </div>
+  </div>
+</section>

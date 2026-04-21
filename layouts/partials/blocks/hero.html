@@ -1,0 +1,16 @@
+{{ $block := .Block }}
+{{ $page := .Page }}
+{{ $bg := "" }}
+{{ with $block.design.background.image.filename }}
+  {{ $bg = partial "image-url.html" (dict "Page" $page "Filename" .) }}
+{{ end }}
+<section class="hero-block{{ if $bg }} has-image{{ end }}"{{ if $bg }} style="--hero-image: url('{{ $bg }}')"{{ end }}>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    {{ with $block.content.title }}<h1>{{ . | markdownify }}</h1>{{ end }}
+    {{ with $block.content.text }}<p>{{ . | markdownify }}</p>{{ end }}
+    {{ with $block.content.link }}
+      <a class="button" href="{{ .url | relURL }}">{{ .text }}</a>
+    {{ end }}
+  </div>
+</section>

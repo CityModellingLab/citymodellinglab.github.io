@@ -42,6 +42,18 @@ jobs:
         with:
           submodules: recursive
           fetch-depth: 0
+      - name: Set up Quarto
+        uses: quarto-dev/quarto-actions/setup@v2
+      - name: Set up Python for Quarto posts
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Quarto post dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements-quarto.txt
+      - name: Render Quarto blog sources
+        run: quarto render
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
@@ -52,7 +64,6 @@ jobs:
           HUGO_ENV: production
         run: |
           hugo \
-            --gc \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact

@@ -1,18 +1,19 @@
 project:
-  type: default
-  post-render:
-    - scripts/process_hugo_iframe.py
+  type: hugo
+  render:
+    - content/blog/**/index.qmd
+    - content/blog/**/index.ipynb
+
+execute:
+  eval: true
+  echo: true
+  freeze: auto
+  warning: false
+  message: false
+
+jupyter: python3
 
 format:
-  html:
-    embed-resources: true 
-    theme: cosmo
-    sidebar: false
-    navbar: false
-    page-layout: custom
+  hugo-md:
     code-fold: true
-    include-in-header:
-      text: |
-        <style>
-          body { padding: 0; margin: 0; overflow-x: hidden; }
-        </style>
+    code-summary: "Show code"

@@ -1,0 +1,19 @@
+{{ $page := .Page }}
+{{ $filename := .Filename }}
+{{ $url := "" }}
+{{ if $filename }}
+  {{ with $page.Resources.GetMatch $filename }}
+    {{ $url = .RelPermalink }}
+  {{ else }}
+    {{ with resources.Get (printf "media/%s" $filename) }}
+      {{ $url = .RelPermalink }}
+    {{ else }}
+      {{ with resources.Get $filename }}
+        {{ $url = .RelPermalink }}
+      {{ else }}
+        {{ $url = (printf "/%s" $filename) | relURL }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ return $url }}

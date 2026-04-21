@@ -1,0 +1,12 @@
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+{{ $title := cond .IsHome site.Title (printf "%s | %s" .Title site.Title) }}
+<title>{{ $title }}</title>
+{{ with site.Params.marketing.seo.description }}<meta name="description" content="{{ . }}">{{ end }}
+{{ with resources.Get "scss/site.scss" }}
+  {{ $css := . | toCSS (dict "targetPath" "css/site.css") | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ $css.RelPermalink }}" integrity="{{ $css.Data.Integrity }}">
+{{ end }}
+{{ with resources.Get "media/icon.png" }}
+  <link rel="icon" href="{{ .RelPermalink }}">
+{{ end }}

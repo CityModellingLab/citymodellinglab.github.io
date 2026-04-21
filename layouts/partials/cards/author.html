@@ -1,0 +1,13 @@
+<article class="author-card">
+  <a class="author-avatar" href="{{ .RelPermalink }}">
+    {{ with .Resources.GetMatch "avatar.*" }}
+      <img src="{{ .RelPermalink }}" alt="{{ $.Title }}">
+    {{ else }}
+      <span>{{ substr .Title 0 1 }}</span>
+    {{ end }}
+  </a>
+  <div>
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    {{ with .Params.role }}<p>{{ . }}</p>{{ end }}
+  </div>
+</article>

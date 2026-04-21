@@ -1,0 +1,19 @@
+<article class="content-card">
+  {{ with .Resources.GetMatch "featured.*" }}
+    <a class="card-image" href="{{ $.RelPermalink }}"><img src="{{ .RelPermalink }}" alt=""></a>
+  {{ end }}
+  <div class="card-body">
+    <p class="eyebrow">
+      {{ if eq .Section "blog" }}
+        {{ with .Date }}{{ .Format "Jan 2, 2006" }}{{ end }}
+      {{ else }}
+        {{ partial "section-label.html" .Section }}{{ with .Date }} · {{ .Format "Jan 2, 2006" }}{{ end }}
+      {{ end }}
+    </p>
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    {{ with .Params.summary }}<p>{{ . }}</p>{{ else }}{{ with .Summary }}<p>{{ . | plainify }}</p>{{ end }}{{ end }}
+    {{ with .Params.authors }}
+      <p class="byline">By {{ partial "authors/list.html" (dict "Authors" . "Page" $) }}</p>
+    {{ end }}
+  </div>
+</article>

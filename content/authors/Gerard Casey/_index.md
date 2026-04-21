@@ -1,6 +1,8 @@
 ---
 # Display name
 title: Gerry Casey
+author_aliases:
+  - Gerard Casey
 
 # Full Name (for SEO)
 first_name: Gerry
