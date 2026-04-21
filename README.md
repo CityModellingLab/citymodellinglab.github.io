@@ -117,12 +117,6 @@ The site hides executable source code by default. To show a specific cell, add:
 #| echo: true
 ```
 
-For manually generated standalone HTML widgets, place the widget under `static/blog/my-post/` and embed it from `index.md`:
-
-```markdown
-{{< html-resource src="/blog/my-post/widget.html" height="560" >}}
-```
-
 5. Commit and push to GitHub
 
     ```bash
