@@ -3,10 +3,10 @@
 title: "A post rendered from a Jupyter notebook (.ipynb)"
 date: 2025-06-02
 authors: # names must match names in content/authors for correct linkage
-# - Beatrice Taylor
-# - Claude Lynch
+- Beatrice Taylor
+- Claude Lynch
 summary: The summary that will show up in the preview card
-draft: false
+draft: true
 featured: true
 
 ### Optional

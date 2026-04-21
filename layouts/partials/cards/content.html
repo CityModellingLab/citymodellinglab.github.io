@@ -1,18 +1,26 @@
+{{ $page := . }}
+{{ $showImage := true }}
+{{ if reflect.IsMap . }}
+  {{ $page = .Page }}
+  {{ if isset . "ShowImage" }}{{ $showImage = .ShowImage }}{{ end }}
+{{ end }}
 <article class="content-card">
-  {{ with .Resources.GetMatch "featured.*" }}
-    <a class="card-image" href="{{ $.RelPermalink }}"><img src="{{ .RelPermalink }}" alt=""></a>
+  {{ if $showImage }}
+    {{ with $page.Resources.GetMatch "featured.*" }}
+      <a class="card-image" href="{{ $page.RelPermalink }}"><img src="{{ .RelPermalink }}" alt=""></a>
+    {{ end }}
   {{ end }}
   <div class="card-body">
     <p class="eyebrow">
-      {{ if eq .Section "blog" }}
-        {{ with .Date }}{{ .Format "Jan 2, 2006" }}{{ end }}
+      {{ if eq $page.Section "blog" }}
+        {{ with $page.Date }}{{ .Format "Jan 2, 2006" }}{{ end }}
       {{ else }}
-        {{ partial "section-label.html" .Section }}{{ with .Date }} · {{ .Format "Jan 2, 2006" }}{{ end }}
+        {{ partial "section-label.html" $page.Section }}{{ with $page.Date }} · {{ .Format "Jan 2, 2006" }}{{ end }}
       {{ end }}
     </p>
-    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-    {{ with .Params.summary }}<p>{{ . }}</p>{{ else }}{{ with .Summary }}<p>{{ . | plainify }}</p>{{ end }}{{ end }}
-    {{ with .Params.authors }}
+    <h3><a href="{{ $page.RelPermalink }}">{{ $page.Title }}</a></h3>
+    {{ with $page.Params.summary }}<p>{{ . }}</p>{{ else }}{{ with $page.Summary }}<p>{{ . | plainify }}</p>{{ end }}{{ end }}
+    {{ with $page.Params.authors }}
       <p class="byline">By {{ partial "authors/list.html" (dict "Authors" . "Page" $) }}</p>
     {{ end }}
   </div>

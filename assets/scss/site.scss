@@ -319,6 +319,27 @@ img { max-width: 100%; height: auto; display: block; }
   overflow-x: auto;
   padding: 16px;
 }
+
+.prose .code-fold {
+  margin: 20px 0 24px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+}
+
+.prose .code-fold summary {
+  cursor: pointer;
+  padding: 12px 16px;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.prose .code-fold pre {
+  margin: 0;
+  border-top: 1px solid var(--border);
+  border-radius: 0 0 8px 8px;
+}
+
 .prose .html-widget,
 .prose .plotly,
 .prose .plotly-graph-div,
@@ -383,6 +404,27 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .related-section { margin-top: 56px; }
+
+.related-section > h2 {
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.related-columns {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+  align-items: start;
+}
+
+.related-column h3 {
+  margin: 0 0 16px;
+  font-size: 1.15rem;
+}
+
+.related-column .card-grid {
+  grid-template-columns: 1fr;
+}
 
 .author-bios {
   max-width: 900px;
@@ -545,6 +587,7 @@ img { max-width: 100%; height: auto; display: block; }
   }
   .site-nav { justify-content: flex-start; flex-wrap: wrap; }
   .profile-grid { grid-template-columns: 1fr; }
+  .related-columns { grid-template-columns: 1fr; }
   .card-grid,
   .people-grid { grid-template-columns: 1fr; }
   .author-bio-card { grid-template-columns: 1fr; }

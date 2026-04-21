@@ -30,7 +30,7 @@
         </aside>
       </div>
       {{ $posts := slice }}
-      {{ range where site.RegularPages "Section" "blog" }}
+      {{ range where (where site.RegularPages "Section" "blog") "Draft" "ne" true }}
         {{ $page := . }}
         {{ range .Params.authors }}
           {{ if partial "authors/matches.html" (dict "Name" . "Author" $author) }}{{ $posts = $posts | append $page }}{{ end }}
@@ -45,13 +45,20 @@
       {{ end }}
       {{ if or $posts $publications }}
         <section class="related-section">
-          <h2>Publications and Posts</h2>
-          {{ if $posts }}
-            <div class="card-grid">{{ range $posts }}{{ partial "cards/content.html" . }}{{ end }}</div>
-          {{ end }}
-          {{ if $publications }}
-            <div class="citation-list">{{ range $publications }}{{ partial "cards/publication.html" . }}{{ end }}</div>
-          {{ end }}
+          <div class="related-columns">
+            {{ if $publications }}
+              <section class="related-column">
+                <h3>Publications</h3>
+                <div class="citation-list">{{ range $publications }}{{ partial "cards/publication.html" . }}{{ end }}</div>
+              </section>
+            {{ end }}
+            {{ if $posts }}
+              <section class="related-column">
+                <h3>Posts</h3>
+                <div class="card-grid">{{ range $posts }}{{ partial "cards/content.html" (dict "Page" . "ShowImage" false) }}{{ end }}</div>
+              </section>
+            {{ end }}
+          </div>
         </section>
       {{ end }}
     </article>
