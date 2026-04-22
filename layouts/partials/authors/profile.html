@@ -15,7 +15,12 @@
     </div>
   </header>
   <div class="profile-grid">
-    <div class="prose">{{ $author.Content }}</div>
+    <div class="prose">
+      {{ with $author.Content }}
+        <h2>About</h2>
+        {{ . }}
+      {{ end }}
+    </div>
     <aside>
       {{ with $author.Params.interests }}
         <h2>Interests</h2>
