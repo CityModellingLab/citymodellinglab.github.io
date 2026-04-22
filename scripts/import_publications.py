@@ -11,6 +11,7 @@ from __future__ import annotations
 
 import argparse
 import re
+import shutil
 import sys
 from datetime import datetime
 from pathlib import Path
@@ -247,6 +248,11 @@ def import_publications(bib_path: Path, output_dir: Path) -> int:
 
     output_dir.mkdir(parents=True, exist_ok=True)
     known_bundles = existing_bundles(output_dir)
+    current_keys = {key for _, key, _ in entries}
+    for key, bundle in sorted(known_bundles.items()):
+        if key not in current_keys:
+            shutil.rmtree(bundle)
+            print(f"Pruned {bundle.name}")
     for entry_type, key, fields_text in entries:
         fields = split_fields(fields_text)
         title = clean_tex(fields.get("title", key))
