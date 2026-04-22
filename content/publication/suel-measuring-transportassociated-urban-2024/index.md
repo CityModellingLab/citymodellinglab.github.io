@@ -4,7 +4,7 @@ authors:
 - Esra Suel
 - Claude Lynch
 - Maria Wood
-- Tom Murat
+- Thomas Murat
 - Gerard Casey
 - Adam Dennett
 date: '2024-01-01'
