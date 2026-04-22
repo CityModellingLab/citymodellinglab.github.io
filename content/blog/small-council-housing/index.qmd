@@ -51,7 +51,9 @@ fig = pio.read_json("council_stock_london.json", skip_invalid=True)
 fig.show()
 ```
 
+```{=markdown}
 {{< plotly-json "council_stock_london.json" >}}
+```
 
 In addition to social housing being lost to private ownership, there have also been a few notable cases of 'failed' housing estates being demolished to make way for redevelopment. Two well known instances of this in London are the Heygate Estate in Elephant and Castle[^1], and Robin Hood Gardens in Poplar[^2], both of which were demolished following criticisms that they created unfavourable living conditions. In the case of redevelopment the local council will often set requirements that the new development replaces the social housing units lost in demolition --- however often the work is undertaken by private construction firms who negotiate down the number of social housing units to save costs. As a result, original residents not only lose their homes but are not offered replacement accommodation, leading to their displacement from the area. <!-- note: reference Loretta Lees work here -->
 
@@ -86,7 +88,9 @@ fig = pio.read_json("units_by_year.json", skip_invalid=True)
 fig.show()
 ```
 
+```{=markdown}
 {{< plotly-json "units_by_year.json" >}}
+```
 
 Alongside social and private units these mixed developments might include other 'affordable'[^4] housing. 'Affordable' housing is a catch all term used by the GLA which covers all housing which costs less for the inhabitant compared to comparable properties on the private market. In addition to social housing this includes: discount market rent, discount market sale, and shared ownership. I'm not considering these other types of 'affordable' housing because they are accessed via the private housing market, and as such fulfill a different purpose, and cater to a different group of people, within the housing ecosystem than social housing.
 
@@ -109,7 +113,9 @@ fig.update_layout(height=700)
 fig.show()
 ```
 
+```{=markdown}
 {{< plotly-json "council_proposed_london_cumulative_map.json" >}}
+```
 
 You might notice the map is dominated by large blue circles --- indeed the mixed developments have an average of 224 proposed residential units. As you zoom in you can see a scattering of smaller green circles; these are the entirely social housing developments with an average number of just 11 units proposed, suggesting a pattern of more geographically distributed small social housing developments.
 
@@ -134,7 +140,9 @@ fig = pio.read_json("pie_site_area.json", skip_invalid=True)
 fig.show()
 ```
 
+```{=markdown}
 {{< plotly-json "pie_site_area.json" >}}
+```
 
 Fig. 5 recreates the map in Fig. 3, but this time the planning applications are colour coded and scaled according to the area of the site being proposed for development. Looking at the applications for entirely social housing developments, many of these seem to be on land that has existing poorly utilised infrastructure such as garages or carparks, or they are gaps in terraces. Of the mixed development sites 98 were located in [opportunity areas](https://www.london.gov.uk/programmes-strategies/planning/implementing-london-plan/londons-opportunity-areas) --- brownfield land earmarked for development by the London Plan 2021.
 
@@ -153,7 +161,9 @@ fig.update_layout(height=700)
 fig.show()
 ```
 
+```{=markdown}
 {{< plotly-json "council_proposed_london_cumulative_map_site_area.json" >}}
+```
 
 <!-- Of the entirely social housing developments, 60 were located in opportunity areas. -->
 
@@ -173,7 +183,9 @@ fig = pio.read_json("council_proposed_london_stacked_bar.json", skip_invalid=Tru
 fig.show()
 ```
 
+```{=markdown}
 {{< plotly-json "council_proposed_london_stacked_bar.json" >}}
+```
 
 ## A case of quality over quantity?
 
@@ -211,7 +223,9 @@ fig = pio.read_json("council_proposed_vs_prevention_stacked_bar.json", skip_inva
 fig.show()
 ```
 
+```{=markdown}
 {{< plotly-json "council_proposed_vs_prevention_stacked_bar.json" >}}
+```
 
 What Fig. 7 drives home is that the number of proposed social housing units falls far short of meeting the needs of those currently homeless or in temporary accommodation --- let alone addressing the needs of households living in substandard social or private housing. 
 

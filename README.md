@@ -66,7 +66,7 @@ Use one of these source formats:
 
 - Plain post: write `content/blog/my-post/index.md`.
 - Quarto post: write `content/blog/my-post/index.qmd`, then render it to `index.md`.
-- Notebook post: write `content/blog/my-post/index.ipynb`, then render it to `index.md`.
+- Jupyter notebook post: write `content/blog/my-post/index.ipynb`, then render it to `index.md`.
 
 Hugo publishes `index.md`. It does not execute code by itself. Quarto executes `.qmd` and `.ipynb` posts and generates the Hugo-friendly `index.md`.
 
@@ -112,32 +112,22 @@ quarto render content/blog/my-post/index.qmd
 
 Render all executable posts:
 
+
 ```bash
 quarto render
 ```
 
-Preview:
-
-```bash
-hugo server
-```
-
-GitHub Pages also runs `quarto render` before building Hugo, so executable posts are rendered during deployment.
+Note that only `content/blog/**/index.qmd` and `content/blog/**/index.ipynb` are rendered by the site-wide `quarto render` command.
 
 ### Code Blocks And Outputs
 
-By default, Quarto code is shown as folded code blocks with a `Show code` toggle. Show/hide code for one cell with
+By default, Quarto code is shown as folded code blocks with a `Show code` toggle. Show/hide code for one cell with either 
 
 ```yaml
+# SHOW
 #| echo: true 
+# HIDE
 #| echo: false
-```
-
-Hide code for a whole post by adding this to the post front matter:
-
-```yaml
-execute:
-  echo: false
 ```
 
 ## 3. Members And Projects
@@ -211,7 +201,7 @@ hugo server
 
 ## 5. Publishing Changes
 
-Before pushing, run:
+Before pushing, it is recommended to run this to clean-up Hugo elements:
 
 ```bash
 hugo --minify --renderToMemory
