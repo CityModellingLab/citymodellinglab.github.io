@@ -1,6 +1,8 @@
 ---
 # Display name
 title: Shaun Hoang
+author_aliases:
+  - Thehuan Hoang
 
 # Full Name (for SEO)
 first_name: Shaun
@@ -10,7 +12,7 @@ last_name: Hoang
 superuser: false
 
 # Role/position
-role: Research Assistant, UZH & UCL
+role: Predoc Researcher, UZH & UCL
 
 # Short bio (displayed in user profile at end of posts)
 bio: Shaun's research focuses on using open data, simulation, and machine learning to improve transport resilience in fast-growing cities. Obviously, he loves playing Cities Skylines.

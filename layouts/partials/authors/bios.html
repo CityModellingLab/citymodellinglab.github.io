@@ -1,11 +1,6 @@
 {{ $declared := slice }}
 {{ range .Params.authors }}
-  {{ $name := . }}
-  {{ range where site.Pages "Section" "authors" }}
-    {{ if and .Params.role (partial "authors/matches.html" (dict "Name" $name "Author" .)) }}
-      {{ $declared = $declared | append . }}
-    {{ end }}
-  {{ end }}
+  {{ with partial "authors/page.html" . }}{{ $declared = $declared | append . }}{{ end }}
 {{ end }}
 {{ $declared = uniq $declared }}
 {{ if $declared }}

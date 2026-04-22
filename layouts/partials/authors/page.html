@@ -1,0 +1,8 @@
+{{ $name := printf "%v" . }}
+{{ $profile := false }}
+{{ range where site.Pages "Section" "authors" }}
+  {{ if and (not $profile) .Params.role (partial "authors/matches.html" (dict "Name" $name "Author" .)) }}
+    {{ $profile = . }}
+  {{ end }}
+{{ end }}
+{{ return $profile }}

@@ -9,6 +9,12 @@
           <div class="citation-list">
             {{ range .Pages.ByDate.Reverse }}{{ partial "cards/publication.html" . }}{{ end }}
           </div>
+        {{ else if eq .Section "authors" }}
+          <div class="people-grid">
+            {{ range sort (where (where site.Pages "Section" "authors") "Params.role" "!=" nil) "Params.last_name" }}
+              {{ partial "cards/author.html" . }}
+            {{ end }}
+          </div>
         {{ else }}
           <div class="card-grid">
             {{ range .Pages.ByDate.Reverse }}{{ partial "cards/content.html" . }}{{ end }}

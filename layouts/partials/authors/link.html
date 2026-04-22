@@ -1,10 +1,2 @@
 {{ $name := printf "%v" . }}
-{{ $match := false }}
-{{ $url := "" }}
-{{ range where site.Pages "Section" "authors" }}
-  {{ if and (not $match) (partial "authors/matches.html" (dict "Name" $name "Author" .)) }}
-    {{ $match = true }}
-    {{ $url = .RelPermalink }}
-  {{ end }}
-{{ end }}
-{{ if $match }}<a href="{{ $url }}">{{ $name }}</a>{{ else }}{{ $name }}{{ end }}
+{{ with partial "authors/page.html" $name }}<a href="{{ .RelPermalink }}">{{ $name }}</a>{{ else }}{{ $name }}{{ end }}

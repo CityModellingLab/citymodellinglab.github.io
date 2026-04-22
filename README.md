@@ -141,6 +141,8 @@ To add a member:
 3. Edit `_index.md`.
 4. Add or replace `avatar.jpg`.
 
+The author folder name should match the profile `title`. Use `author_aliases` for any other names that may appear in publications or posts, such as formal names, initials, previous names, or spelling variants. Do not create a second author folder for the same person.
+
 Useful member fields include:
 
 ```yaml
@@ -160,7 +162,8 @@ social:
   link: mailto:name@example.com
 author_aliases:
 - S. Holmes
-# Use `author_aliases` when publications or posts use a different name from the member page.
+- Sherlock H.
+# Use aliases when publications or posts use a different name from the member page.
 ```
 
 
@@ -201,7 +204,7 @@ hugo server
 
 ## 5. Publishing Changes
 
-Before pushing, it is recommended to run this to clean-up Hugo elements:
+Before pushing, it is recommended to clean-up Hugo temp elements:
 
 ```bash
 hugo --minify --renderToMemory

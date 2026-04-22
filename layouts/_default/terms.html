@@ -1,0 +1,18 @@
+{{ define "main" }}
+  {{ partial "blocks/hero.html" (dict "Page" . "Block" (dict "content" (dict "title" .Title "text" .Description))) }}
+  <section class="content-band">
+    <div class="wrap">
+      {{ if eq .Data.Plural "authors" }}
+        <div class="people-grid">
+          {{ range sort (where (where site.Pages "Section" "authors") "Params.role" "!=" nil) "Params.last_name" }}
+            {{ partial "cards/author.html" . }}
+          {{ end }}
+        </div>
+      {{ else }}
+        <div class="card-grid">
+          {{ range .Pages.ByDate.Reverse }}{{ partial "cards/content.html" . }}{{ end }}
+        </div>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}
