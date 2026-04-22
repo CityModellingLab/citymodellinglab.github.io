@@ -413,6 +413,11 @@ img { max-width: 100%; height: auto; display: block; }
   gap: 46px;
 }
 
+.profile-grid .prose h2:first-child,
+.profile-grid aside h2:first-child {
+  margin-top: 0;
+}
+
 .related-section { margin-top: 56px; }
 
 .related-section > h2 {
@@ -429,7 +434,48 @@ img { max-width: 100%; height: auto; display: block; }
 
 .related-column h3 {
   margin: 0 0 16px;
-  font-size: 1.15rem;
+  font-size: 1.5em;
+  line-height: 1.2;
+}
+
+.related-column .publication-item h3 {
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+.related-column .publication-item {
+  padding: 16px;
+  font-size: 0.9rem;
+}
+
+.related-column .publication-item .byline,
+.related-column .publication-item .publication-meta {
+  font-size: 0.82rem;
+}
+
+.related-column .publication-item p {
+  margin: 8px 0 0;
+  line-height: 1.45;
+}
+
+.related-column .content-card h3 {
+  font-size: 0.95rem;
+  line-height: 1.3;
+}
+
+.related-column .content-card .card-body {
+  padding: 16px;
+  font-size: 0.9rem;
+}
+
+.related-column .content-card .eyebrow,
+.related-column .content-card .byline {
+  font-size: 0.82rem;
+}
+
+.related-column .content-card p {
+  margin: 8px 0 0;
+  line-height: 1.45;
 }
 
 .related-column .card-grid {
