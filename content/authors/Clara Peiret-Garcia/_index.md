@@ -60,7 +60,7 @@ highlight_name: false
 
 # Organizational groups that you belong to
 user_groups:
-  - Meet the team
+  - Core team
 ---
 
 I'm a Research Fellow in Urban Analytics at the Centre for Advanced Spatial Analysis (CASA), working on the TRACK-UK project. My research focuses on understanding the diversity of human mobility, mainly how people navigate urban spaces in fundamentally different ways. Rather than looking at the "average" traveler, I dig into how travel behaviors vary across individuals and populations, exploring the spatial distribution of these distinct patterns. 

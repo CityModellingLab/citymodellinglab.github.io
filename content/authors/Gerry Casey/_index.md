@@ -59,7 +59,7 @@ highlight_name: false
 
 # Organizational groups that you belong to
 user_groups:
-  - Meet the team
+  - Core team
 ---
 
 I am a transport modeller and data scientist working at the intersection of research, policy, and real-world decision making. My work focuses on developing and applying large-scale, high-resolution agent-based models to better understand how cities function, how people move, and how policy and infrastructure interventions shape social, environmental, and economic outcomes.

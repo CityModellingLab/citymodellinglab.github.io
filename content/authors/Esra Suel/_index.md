@@ -57,7 +57,7 @@ highlight_name: false
 
 # Organizational groups that you belong to
 user_groups:
-  - Meet the team
+  - Core team
 ---
 
 Esra is an Associate Professor of Urban Analytics at the University of Zurich and an Associate Professor at UCL's Centre for Advanced Spatial Analysis (CASA). 

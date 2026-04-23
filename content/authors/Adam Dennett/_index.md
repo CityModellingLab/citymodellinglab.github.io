@@ -54,7 +54,7 @@ highlight_name: false
 
 # Organizational groups that you belong to
 user_groups:
-  - Meet the team
+  - Core team
 ---
 
 <!-- Long bio -->

@@ -48,7 +48,7 @@ highlight_name: false
 
 # Organizational groups that you belong to
 user_groups:
-  - Meet the team
+  - Core team
 ---
 Roei joined CASA as a first year PhD student in 2025, where his research focuses on possible optimal locations for new towns in the UK.
 

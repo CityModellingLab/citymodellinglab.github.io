@@ -1,5 +1,5 @@
 ---
-title: 
+title: Projects
 type: landing
 sections:
   - block: hero

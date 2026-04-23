@@ -61,7 +61,7 @@ highlight_name: false
 
 # Organizational groups that you belong to
 user_groups:
-  - Meet the team
+  - Core team
 ---
 
 I am a postdoc in CASA, working on the Smart Cities theme as part of the AI for Collective Intelligence (AI4CI) hub. My current research focuses on using machine learning methods to analyse how London's built environment is changing. Recently I've been using natural language processing to develop a data-driven characterisation of responses to planning applications. 

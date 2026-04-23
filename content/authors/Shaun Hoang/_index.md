@@ -57,7 +57,7 @@ highlight_name: false
 
 # Organizational groups that you belong to
 user_groups:
-  - Meet the team
+  - Core team
 ---
 
 Shaun Hoang (The-Huan)'s research focuses on improving equitable and sustainable access and transport resilience in fast-growing cities, particularly in the Global South. He is interested in combining complexity science and spatial data analysis to study first/last-mile access and transport resilience, using open geodata, simulation, and machine learning methods.

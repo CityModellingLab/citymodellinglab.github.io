@@ -1,6 +1,6 @@
 # Navigation Links
 main:
-  - name: People
+  - name: About Us
     url: people
     weight: 10  
   - name: Projects
@@ -9,7 +9,7 @@ main:
   - name: Publications 
     url: publication
     weight: 30
-  - name: Posts
+  - name: Blog
     url: blog
     weight: 40
 

@@ -1,5 +1,5 @@
 ---
-title: 
+title: Publications
 type: landing
 sections:
   - block: hero

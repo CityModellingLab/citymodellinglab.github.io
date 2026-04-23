@@ -1,11 +1,11 @@
 ---
-title: People
+title: About Us
 type: landing
 
 sections:
   - block: hero
     content:
-      title: Our Team  
+      title: Meet the Team  
       text: Bridge the gap between theory, practice, and policy
     design:
       background:
@@ -27,7 +27,7 @@ sections:
           # - PhD Researchers
           # - Research Assistants
           # - Administration
-          - Meet the team
+          - Core team
       sort_by: Params.last_name
       sort_ascending: true
     design:
@@ -41,7 +41,7 @@ sections:
  
   - block: hero
     content:
-      title: Our Objectives
+      title: Our Philosophy
       text: Tackle climate change and social inequality with data
     design:
       background:

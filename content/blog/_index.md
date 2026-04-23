@@ -1,10 +1,10 @@
 ---
-title: 
+title: Blog
 type: landing
 sections:
   - block: hero
     content:
-      title: Blog posts
+      title: Blog
       text: What we're thinking about...
     design:
       background:
