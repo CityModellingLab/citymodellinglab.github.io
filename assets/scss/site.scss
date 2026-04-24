@@ -258,6 +258,7 @@ img { max-width: 100%; height: auto; display: block; }
   display: flex;
   align-items: center;
   gap: 16px;
+  margin-inline: 28px;
   padding: 18px;
   width: 100%;
   max-width: 350px;
@@ -295,6 +296,10 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .author-profile:has(+ .profile-related) {
+  padding-bottom: clamp(21px, 3.5vw, 46px);
+}
+
+.section-blog .article:has(+ .author-bios) {
   padding-bottom: clamp(21px, 3.5vw, 46px);
 }
 
@@ -503,10 +508,12 @@ img { max-width: 100%; height: auto; display: block; }
 }
 
 .author-bios {
-  max-width: 900px;
   margin: clamp(42px, 6vw, 72px) auto 0;
-  padding-top: 28px;
-  border-top: 1px solid var(--border);
+  background: var(--bg-soft);
+}
+
+.author-bios .wrap {
+  max-width: 900px;
 }
 
 .author-bios h2 {
@@ -521,10 +528,12 @@ img { max-width: 100%; height: auto; display: block; }
 
 .author-bio-card {
   display: grid;
-  grid-template-columns: 88px minmax(0, 1fr);
+  grid-template-columns: 112px minmax(0, 1fr);
   gap: 18px;
-  align-items: start;
-  padding: 18px;
+  align-items: center;
+  min-height: 172px;
+  margin-inline: 28px;
+  padding: 18px 32px;
   border: 1px solid var(--border);
   border-radius: 8px;
   background: var(--card);
@@ -532,7 +541,7 @@ img { max-width: 100%; height: auto; display: block; }
 
 .author-bio-avatar {
   display: block;
-  width: 88px;
+  width: 112px;
   aspect-ratio: 1;
   overflow: hidden;
   border-radius: 50%;

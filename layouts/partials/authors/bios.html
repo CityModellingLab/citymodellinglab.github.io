@@ -4,25 +4,27 @@
 {{ end }}
 {{ $declared = uniq $declared }}
 {{ if $declared }}
-  <section class="author-bios">
-    <h2>About the Authors</h2>
-    <div class="author-bio-list">
-      {{ range $declared }}
-        <article class="author-bio-card">
-          <a class="author-bio-avatar" href="{{ .RelPermalink }}">
-            {{ with .Resources.GetMatch "avatar.*" }}
-              <img src="{{ .RelPermalink }}" alt="{{ $.Title }}">
-            {{ else }}
-              <span>{{ substr .Title 0 1 }}</span>
-            {{ end }}
-          </a>
-          <div>
-            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-            {{ with .Params.role }}<p class="author-bio-role">{{ . }}</p>{{ end }}
-            {{ with .Params.bio }}<p>{{ . }}</p>{{ end }}
-          </div>
-        </article>
-      {{ end }}
+  <section class="content-band author-bios">
+    <div class="wrap">
+      <h2>About the Authors</h2>
+      <div class="author-bio-list">
+        {{ range $declared }}
+          <article class="author-bio-card">
+            <a class="author-bio-avatar" href="{{ .RelPermalink }}">
+              {{ with .Resources.GetMatch "avatar.*" }}
+                <img src="{{ .RelPermalink }}" alt="{{ $.Title }}">
+              {{ else }}
+                <span>{{ substr .Title 0 1 }}</span>
+              {{ end }}
+            </a>
+            <div>
+              <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+              {{ with .Params.role }}<p class="author-bio-role">{{ . }}</p>{{ end }}
+              {{ with .Params.bio }}<p>{{ . }}</p>{{ end }}
+            </div>
+          </article>
+        {{ end }}
+      </div>
     </div>
   </section>
 {{ end }}

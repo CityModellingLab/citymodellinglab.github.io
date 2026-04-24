@@ -18,8 +18,8 @@
       </header>
       {{ with .Params.abstract }}<section class="prose"><h2>Abstract</h2><p>{{ . }}</p></section>{{ end }}
       <div class="prose">{{ .Content }}</div>
-      {{ partial "authors/bios.html" . }}
     </article>
+    {{ partial "authors/bios.html" . }}
   {{ else }}
     <article class="article wrap">
       <header class="article-header">
@@ -33,7 +33,7 @@
         {{ with .Resources.GetMatch "featured.*" }}<img class="article-featured" src="{{ .RelPermalink }}" alt="">{{ end }}
       </header>
       <div class="prose">{{ .Content }}</div>
-      {{ partial "authors/bios.html" . }}
     </article>
+    {{ partial "authors/bios.html" . }}
   {{ end }}
 {{ end }}
