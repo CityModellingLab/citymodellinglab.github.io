@@ -1,4 +1,18 @@
 {{ $author := .Author }}
+{{ $posts := slice }}
+{{ range where (where site.RegularPages "Section" "blog") "Draft" "ne" true }}
+  {{ $page := . }}
+  {{ range .Params.authors }}
+    {{ if partial "authors/matches.html" (dict "Name" . "Author" $author) }}{{ $posts = $posts | append $page }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ $publications := slice }}
+{{ range where site.RegularPages "Section" "publication" }}
+  {{ $page := . }}
+  {{ range .Params.authors }}
+    {{ if partial "authors/matches.html" (dict "Name" . "Author" $author) }}{{ $publications = $publications | append $page }}{{ end }}
+  {{ end }}
+{{ end }}
 <article class="author-profile wrap">
   <header class="profile-header">
     {{ with $author.Resources.GetMatch "avatar.*" }}
@@ -32,36 +46,24 @@
       {{ end }}
     </aside>
   </div>
-  {{ $posts := slice }}
-  {{ range where (where site.RegularPages "Section" "blog") "Draft" "ne" true }}
-    {{ $page := . }}
-    {{ range .Params.authors }}
-      {{ if partial "authors/matches.html" (dict "Name" . "Author" $author) }}{{ $posts = $posts | append $page }}{{ end }}
-    {{ end }}
-  {{ end }}
-  {{ $publications := slice }}
-  {{ range where site.RegularPages "Section" "publication" }}
-    {{ $page := . }}
-    {{ range .Params.authors }}
-      {{ if partial "authors/matches.html" (dict "Name" . "Author" $author) }}{{ $publications = $publications | append $page }}{{ end }}
-    {{ end }}
-  {{ end }}
-  {{ if or $posts $publications }}
-    <section class="related-section">
+</article>
+{{ if or $posts $publications }}
+  <section class="content-band related-section profile-related">
+    <div class="wrap">
       <div class="related-columns">
         {{ if $publications }}
           <section class="related-column">
-            <h3>Publications</h3>
+            <h3>Related publications</h3>
             <div class="citation-list">{{ range $publications }}{{ partial "cards/publication.html" . }}{{ end }}</div>
           </section>
         {{ end }}
         {{ if $posts }}
           <section class="related-column">
-            <h3>Posts</h3>
+            <h3>Related posts</h3>
             <div class="card-grid">{{ range $posts }}{{ partial "cards/content.html" (dict "Page" . "ShowImage" false) }}{{ end }}</div>
           </section>
         {{ end }}
       </div>
-    </section>
-  {{ end }}
-</article>
+    </div>
+  </section>
+{{ end }}

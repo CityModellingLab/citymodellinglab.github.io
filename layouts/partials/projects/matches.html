@@ -1,0 +1,20 @@
+{{ $page := .Page }}
+{{ $project := .Project }}
+{{ $projectSlug := $project.Slug | default $project.File.ContentBaseName | default ($project.Title | urlize) }}
+{{ $projectTitle := $project.Title }}
+{{ $projectKeys := slice $projectSlug ($projectTitle | urlize) }}
+{{ with $project.Params.project_aliases }}
+  {{ range . }}{{ $projectKeys = $projectKeys | append (. | urlize) }}{{ end }}
+{{ end }}
+{{ $match := false }}
+{{ with $page.Params.projects }}
+  {{ range . }}
+    {{ if in $projectKeys (. | urlize) }}{{ $match = true }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ with $page.Params.tags }}
+  {{ range . }}
+    {{ if in $projectKeys (. | urlize) }}{{ $match = true }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ return $match }}

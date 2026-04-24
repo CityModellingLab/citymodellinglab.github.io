@@ -1,5 +1,8 @@
 {{ define "main" }}
-  {{ if eq .Params.type "landing" }}
+  {{ if and (eq .Params.type "landing") (eq .Section "project") }}
+    {{ partial "landing-sections.html" . }}
+    {{ partial "projects/related.html" . }}
+  {{ else if eq .Params.type "landing" }}
     {{ partial "landing-sections.html" . }}
   {{ else if eq .Section "publication" }}
     <article class="article wrap">

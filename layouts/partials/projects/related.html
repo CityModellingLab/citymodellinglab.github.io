@@ -1,0 +1,35 @@
+{{ $project := . }}
+{{ $posts := slice }}
+{{ range where (where site.RegularPages "Section" "blog") "Draft" "ne" true }}
+  {{ if partial "projects/matches.html" (dict "Page" . "Project" $project) }}
+    {{ $posts = $posts | append . }}
+  {{ end }}
+{{ end }}
+{{ $posts = sort $posts "Date" "desc" }}
+{{ $publications := slice }}
+{{ range where site.RegularPages "Section" "publication" }}
+  {{ if partial "projects/matches.html" (dict "Page" . "Project" $project) }}
+    {{ $publications = $publications | append . }}
+  {{ end }}
+{{ end }}
+{{ $publications = sort $publications "Date" "desc" }}
+{{ if or $posts $publications }}
+  <section class="content-band project-related">
+    <div class="wrap">
+      <div class="related-columns">
+        {{ if $publications }}
+          <section class="related-column">
+            <h3>Related publications</h3>
+            <div class="citation-list">{{ range $publications }}{{ partial "cards/publication.html" . }}{{ end }}</div>
+          </section>
+        {{ end }}
+        {{ if $posts }}
+          <section class="related-column">
+            <h3>Related posts</h3>
+            <div class="card-grid">{{ range $posts }}{{ partial "cards/content.html" (dict "Page" . "ShowImage" false) }}{{ end }}</div>
+          </section>
+        {{ end }}
+      </div>
+    </div>
+  </section>
+{{ end }}

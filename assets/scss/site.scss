@@ -294,6 +294,10 @@ img { max-width: 100%; height: auto; display: block; }
   padding: clamp(42px, 7vw, 92px) 0;
 }
 
+.author-profile:has(+ .profile-related) {
+  padding-bottom: clamp(21px, 3.5vw, 46px);
+}
+
 .article-header {
   max-width: 900px;
   margin: 0 auto 34px;
@@ -413,12 +417,28 @@ img { max-width: 100%; height: auto; display: block; }
   gap: 46px;
 }
 
-.profile-grid .prose h2:first-child,
-.profile-grid aside h2:first-child {
+.profile-grid h2 {
+  margin: 2.1em 0 14px;
+  line-height: 1.2;
+}
+
+.profile-grid h2:first-child {
   margin-top: 0;
 }
 
-.related-section { margin-top: 56px; }
+.profile-grid h2 + p,
+.profile-grid h2 + ul {
+  margin-top: 0;
+}
+
+.related-section {
+  margin-top: 56px;
+  background: var(--bg-soft);
+}
+
+.project-related {
+  background: var(--bg-soft);
+}
 
 .related-section > h2 {
   margin-bottom: 24px;
@@ -622,8 +642,18 @@ img { max-width: 100%; height: auto; display: block; }
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
+.section-project main > .content-band:not(.collection-block):not(.project-related) {
+  padding-block: clamp(21px, 3vw, 44px);
+}
+
 .section-people .people-grid {
   justify-items: center;
+}
+
+.section-people main > section:nth-of-type(4).content-band {
+  display: grid;
+  align-items: center;
+  min-height: 590px;
 }
 
 .section-project .article-header h1 {
@@ -649,6 +679,7 @@ img { max-width: 100%; height: auto; display: block; }
   .author-bio-card { grid-template-columns: 1fr; }
   .home .collection-blog .card-grid { grid-template-columns: 1fr; }
   .section-project .collection-project .card-grid { grid-template-columns: 1fr; }
+  .section-people main > section:nth-of-type(4).content-band { min-height: auto; }
   .home .content-band:nth-of-type(2) .prose > div {
     gap: 18px !important;
   }
