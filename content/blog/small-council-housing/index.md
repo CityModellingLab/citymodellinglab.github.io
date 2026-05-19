@@ -2,7 +2,7 @@
 ### Required
 title: London's permanent accommodation crisis
 date: 2025-05-21
-authors: # names must match names in content/authors for correct linkage
+authors: 
 - Beatrice Taylor
 summary: At the root of the temporary accommodation crisis is a lack of council housing, but what are councils doing to address it?
 draft: false
