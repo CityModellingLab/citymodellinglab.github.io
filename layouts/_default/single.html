@@ -1,10 +1,10 @@
 {{ define "main" }}
-  {{ if and (eq .Params.type "landing") (eq .Section "project") }}
+  {{ if and (eq .Params.type "landing") (eq .Section "projects") }}
     {{ partial "landing-sections.html" . }}
     {{ partial "projects/related.html" . }}
   {{ else if eq .Params.type "landing" }}
     {{ partial "landing-sections.html" . }}
-  {{ else if eq .Section "publication" }}
+  {{ else if eq .Section "publications" }}
     <article class="article wrap">
       <header class="article-header">
         <p class="eyebrow">Publication</p>

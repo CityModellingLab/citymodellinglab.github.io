@@ -7,7 +7,7 @@
   {{ end }}
 {{ end }}
 {{ $publications := slice }}
-{{ range where site.RegularPages "Section" "publication" }}
+{{ range where site.RegularPages "Section" "publications" }}
   {{ $page := . }}
   {{ range .Params.authors }}
     {{ if partial "authors/matches.html" (dict "Name" . "Author" $author) }}{{ $publications = $publications | append $page }}{{ end }}

@@ -643,15 +643,15 @@ img { max-width: 100%; height: auto; display: block; }
   -webkit-line-clamp: 3;
 }
 
-.home .collection-publication {
+.home .collection-publications {
   padding-top: clamp(24px, 3vw, 42px);
 }
 
-.section-project .collection-project .card-grid {
+.section-projects .collection-projects .card-grid {
   grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 
-.section-project main > .content-band:not(.collection-block):not(.project-related) {
+.section-projects main > .content-band:not(.collection-block):not(.project-related) {
   padding-block: clamp(21px, 3vw, 44px);
 }
 
@@ -665,7 +665,7 @@ img { max-width: 100%; height: auto; display: block; }
   min-height: 590px;
 }
 
-.section-project .article-header h1 {
+.section-projects .article-header h1 {
   font-size: clamp(1.4rem, 2.5vw, 2rem);
 }
 
@@ -687,7 +687,7 @@ img { max-width: 100%; height: auto; display: block; }
   .people-grid { grid-template-columns: 1fr; }
   .author-bio-card { grid-template-columns: 1fr; }
   .home .collection-blog .card-grid { grid-template-columns: 1fr; }
-  .section-project .collection-project .card-grid { grid-template-columns: 1fr; }
+  .section-projects .collection-projects .card-grid { grid-template-columns: 1fr; }
   .section-people main > section:nth-of-type(4).content-band { min-height: auto; }
   .home .content-band:nth-of-type(2) .prose > div {
     gap: 18px !important;

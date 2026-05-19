@@ -60,7 +60,7 @@ sections:
           color: '#555'
         link:
           text: Learn More
-          url: project/ai4ci
+          url: projects/ai4ci
       - title: National Trip End Model Synthetic Population
         content: Building a synthetic population for the UK Department for Transport
         align: left
@@ -73,7 +73,7 @@ sections:
           color: '#333'
         link:
           text: Learn More
-          url: project/ntem
+          url: projects/ntem
       - title: TRACK-UK
         content: Synthesised Census and Small Area Statistics for Transport and Energy
         align: left
@@ -86,7 +86,7 @@ sections:
           color: '#333'
         link:
           text: Learn More
-          url: project/track-uk
+          url: projects/track-uk
       - title: GeoMobility
         content: Geodemographics for Equitable Mobility Futures
         align: left
@@ -99,7 +99,7 @@ sections:
           color: '#555'
         link:
           text: Learn More
-          url: project/geomobility
+          url: projects/geomobility
     design:
       slide_height: ''
       is_fullscreen: true
@@ -131,7 +131,7 @@ sections:
       count: 3
       filters:
         folders:
-          - publication
+          - publications
         publication_type: article-journal
       
     design:

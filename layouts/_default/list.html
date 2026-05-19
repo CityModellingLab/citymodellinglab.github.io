@@ -5,7 +5,7 @@
     {{ partial "blocks/hero.html" (dict "Page" . "Block" (dict "content" (dict "title" .Title "text" .Description))) }}
     <section class="content-band">
       <div class="wrap">
-        {{ if eq .Section "publication" }}
+        {{ if eq .Section "publications" }}
           <div class="citation-list">
             {{ range .Pages.ByDate.Reverse }}{{ partial "cards/publication.html" . }}{{ end }}
           </div>

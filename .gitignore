@@ -7,5 +7,6 @@ public/
 assets/jsconfig.json
 
 /.quarto/
+/_freeze/
 
 **/*.quarto_ipynb

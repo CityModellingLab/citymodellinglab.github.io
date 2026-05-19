@@ -1,6 +1,4 @@
-This website is built with Hugo, local templates, Quarto for computational blog posts, and GitHub Pages for deployment.
-
-Small text edits can be made directly in GitHub or a Codespace. For larger changes, use the local setup below.
+This website is built with Hugo, local templates, Quarto for computational blog posts, and GitHub Pages for deployment. Small text edits can be made directly in GitHub or a Codespace. For larger changes, use the local setup below.
 
 ## 1. Local Setup
 
@@ -92,7 +90,7 @@ tags:
 - Mobility Patterns
 - Machine Learning
 
-# If the post is linked to any project under content/project/. Otherwise, leave blank.
+# If the post is linked to any project under content/projects/. Otherwise, leave blank.
 projects: ['ai4ci']
 
 # Add collaterals which will show up as clickable buttons on the post
@@ -107,7 +105,7 @@ Notes:
 
 - `authors` should match names under `content/authors/` so author links and profile backlinks work.
 - `draft: true` keeps a post out of production pages and member profile post lists.
-- `projects` should contain project folder names from `content/project/`, for example `['ai4ci']`.
+- `projects` should contain project folder names from `content/projects/`, for example `['ai4ci']`.
 - Add a featured image named `featured.jpg` in the post folder.
 
 ### Rendering Posts
@@ -140,7 +138,7 @@ By default, Quarto code is shown as folded code blocks with a `Show code` toggle
 
 ## 3. Members And Projects
 
-Members live under `content/authors/`. Projects live under `content/project/`.
+Members live under `content/authors/`. Projects live under `content/projects/`.
 
 To add a member:
 
@@ -178,8 +176,8 @@ author_aliases:
 
 To add a project:
 
-1. Copy an existing folder under `content/project/`.
-2. Rename it with a URL-friendly folder name, for example `content/project/space-syntax-urban-morph/`.
+1. Copy an existing folder under `content/projects/`.
+2. Rename it with a URL-friendly folder name, for example `content/projects/space-syntax-urban-morph/`.
 3. Edit `index.md`.
 4. Add or replace `featured.jpg`.
 
@@ -195,7 +193,7 @@ To add or update publications:
 2. Make sure CML author names match folders under `content/authors/`, or add `author_aliases` to the relevant member page.
 3. Commit and push `publications.bib`.
 
-GitHub Actions converts and commits each BibTeX entry into a Hugo page bundle under `content/publication/`, and redeploys the page. Deleted entries in `publications.bib` will also be removed from the website.
+GitHub Actions converts and commits each BibTeX entry into a Hugo page bundle under `content/publications/`, and redeploys the page. Deleted entries in `publications.bib` will also be removed from the website.
 
 
 

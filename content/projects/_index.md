@@ -24,7 +24,7 @@ sections:
       subtitle: 
       filters:
         folders:
-          - project
+          - projects
     design:
       columns: '2'
       view: card

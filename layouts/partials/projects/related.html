@@ -7,7 +7,7 @@
 {{ end }}
 {{ $posts = sort $posts "Date" "desc" }}
 {{ $publications := slice }}
-{{ range where site.RegularPages "Section" "publication" }}
+{{ range where site.RegularPages "Section" "publications" }}
   {{ if partial "projects/matches.html" (dict "Page" . "Project" $project) }}
     {{ $publications = $publications | append . }}
   {{ end }}

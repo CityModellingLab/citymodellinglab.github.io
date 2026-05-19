@@ -27,7 +27,7 @@
       </header>
       <div class="citation-list">
         {{ range .Pages.ByDate.Reverse }}
-          {{ if eq .Section "publication" }}
+          {{ if eq .Section "publications" }}
             {{ partial "cards/publication.html" . }}
           {{ else }}
             {{ partial "cards/content.html" . }}

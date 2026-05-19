@@ -5,7 +5,7 @@ sections:
   - block: hero
     content:
       title: Publications
-      text: What we've published...
+      text: What we've written and presented...
     design:
       background:
         image: 
@@ -25,7 +25,7 @@ sections:
       subtitle: 
       filters:
         folders:
-          - publication
+          - publications
     design:
       columns: '2'
       view: citation

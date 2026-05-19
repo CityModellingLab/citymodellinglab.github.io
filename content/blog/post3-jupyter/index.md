@@ -14,7 +14,7 @@ tags:
 - Housing
 - Urban Planning
 
-# If the post is linked to any project under content/project/, add the folder's name(s), e.g. ['ai4ci','ntem']. Otherwise, leave blank.
+# If the post is linked to any project under content/projects/, add the folder's name(s), e.g. ['ai4ci','ntem']. Otherwise, leave blank.
 projects: ['ai4ci'] 
 
 # Add collaterals which will show up as clickable buttons on the post
