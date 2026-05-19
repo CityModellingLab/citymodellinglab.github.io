@@ -76,18 +76,26 @@ Put this at the top of `index.md` or `index.qmd`. For `.ipynb`, put it in the fi
 
 ```yaml
 ---
+### Required
 title: New Post
 date: 2026-05-02
-authors:
+authors: # names must match names in content/authors for correct linkage
 - Shaun Hoang
 - Thomas Murat
 summary: The summary shown in preview cards
 draft: false
+
+### Optional
+# Tags for filtering
 featured: true
 tags:
 - Mobility Patterns
 - Machine Learning
-projects: []
+
+# If the post is linked to any project under content/project/. Otherwise, leave blank.
+projects: ['ai4ci']
+
+# Add collaterals which will show up as clickable buttons on the post
 url_code: ''
 url_pdf: ''
 url_slides: ''
