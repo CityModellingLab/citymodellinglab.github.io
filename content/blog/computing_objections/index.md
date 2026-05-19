@@ -3,16 +3,13 @@ title: Computing objections
 subtitle: 'Part 1: London''s housing crisis and how natural language processing can help'
 date: 2026-07-05T00:00:00.000Z
 authors:
-  - Beatrice Taylor
-summary: >-
-  Planning objections are often blamed for slowing housebuilding. But what do
-  those objections actually say? This is the first post in a series using
-  natural language processing to find out.
+- Beatrice Taylor
+summary: Planning objections are often blamed for slowing housebuilding. But what do those objections actually say? This is the first post in a series using natural language processing to find out.
 draft: false
 featured: true
 tags:
-  - Housing
-  - Machine Learning
+- Housing
+- Machine Learning
 projects: ['ai4ci']
 url_code: ''
 url_pdf: ''
