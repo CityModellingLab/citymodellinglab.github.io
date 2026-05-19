@@ -13,8 +13,7 @@ featured: true
 tags:
   - Housing
   - Machine Learning
-projects:
-  - AI4CI Smart Cities
+projects: ['ai4ci']
 url_code: ''
 url_pdf: ''
 url_slides: ''
