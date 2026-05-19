@@ -3,7 +3,7 @@ title: Computing objections
 subtitle: 'Part 1: London''s housing crisis and how natural language processing can help'
 date: 2026-07-05T00:00:00.000Z
 authors:
-  - Bea Taylor
+  - Beatrice Taylor
 summary: >-
   Planning objections are often blamed for slowing housebuilding. But what do
   those objections actually say? This is the first post in a series using
