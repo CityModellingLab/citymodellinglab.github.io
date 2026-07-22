@@ -1,6 +1,6 @@
 # Navigation Links
 main:
-  - name: About Us
+  - name: People
     url: people
     weight: 10  
   - name: Projects
