@@ -1,11 +1,11 @@
 ---
-title: About Us
+title: People
 type: landing
 
 sections:
   - block: hero
     content:
-      title: Meet the Team  
+      title: The Team  
       text: Bridge the gap between theory, practice, and policy
     design:
       background:
@@ -41,7 +41,7 @@ sections:
  
   - block: hero
     content:
-      title: Our Philosophy
+      title: The Mission
       text: Tackle climate change and social inequality with data
     design:
       background:
