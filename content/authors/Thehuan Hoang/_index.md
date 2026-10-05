@@ -9,7 +9,7 @@ first_name: Thehuan
 last_name: Hoang
 
 # Role/position
-role: PhD Researcher (Ext. Collaborator)
+role: PhD Researcher
 
 # Short bio (displayed in user profile at end of posts)
 bio: Shaun's research focuses on using open data, simulation, and machine learning to improve transport resilience in fast-growing cities. Obviously, he loves playing Cities Skylines.

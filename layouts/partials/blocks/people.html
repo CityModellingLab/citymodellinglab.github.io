@@ -1,10 +1,6 @@
 {{ $block := .Block }}
 {{ $authors := where site.Pages "Section" "authors" }}
-{{ $authors = where $authors "Title" "!=" "" }}
-{{ with $block.content.user_groups }}
-  {{ $groups := . }}
-  {{ $authors = where $authors "Params.user_groups" "intersect" $groups }}
-{{ end }}
+{{ $authors = where $authors "File" "ne" nil }}
 {{ $authors = sort $authors "Params.last_name" "asc" }}
 <section class="content-band">
   <div class="wrap">
