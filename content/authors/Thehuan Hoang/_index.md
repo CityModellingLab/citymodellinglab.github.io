@@ -12,7 +12,7 @@ last_name: Hoang
 superuser: false
 
 # Role/position
-role: PhD Researcher (Affiliated)
+role: PhD Researcher (External)
 
 # Short bio (displayed in user profile at end of posts)
 bio: Shaun's research focuses on using open data, simulation, and machine learning to improve transport resilience in fast-growing cities. Obviously, he loves playing Cities Skylines.
@@ -27,7 +27,7 @@ education:
     - course: MSc in Urban Spatial Science
       institution: University College London
       year: 2024
-    - course: MSc in Economics and Management of Technology and Innovation
+    - course: MSc in Economics and Management of Technology
       institution: Università Commerciale Bocconi
       year: 2014
     - course: BA in Urban Development and Economics
@@ -57,4 +57,4 @@ user_groups:
   - Core team
 ---
 
-Thehuan's research focuses on improving equitable and sustainable access and transport resilience in fast-growing cities, particularly in the Global South. He is interested in combining complexity science and spatial data analysis to study first/last-mile access and transport resilience, using open geodata, simulation, and machine learning methods.
+Thehuan is a Marie Skłodowska-Curie PhD Fellow at the Universitat Oberta de Catalunya, and an external collaborator at the City Modelling Lab. His research focuses on evaluating the resilience of multimodal transport networks, particularly in cities in the Global South, using open data and scalable methods.

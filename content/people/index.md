@@ -5,7 +5,7 @@ type: landing
 sections:
   - block: hero
     content:
-      title: Our Team  
+      title: The Team  
       text: Bridge the gap between theory, practice, and policy
     design:
       background:

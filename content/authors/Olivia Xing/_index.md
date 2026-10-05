@@ -39,7 +39,7 @@ social:
     link: 'mailto:yujing.xing.20@ucl.ac.uk'
   - icon: linkedin
     icon_pack: fab
-    link: www.linkedin.com/in/yujing-xing
+    link: https://www.linkedin.com/in/yujing-xing
   - icon: github
     icon_pack: fab
     link: https://github.com/yxing82
