@@ -4,15 +4,12 @@ title: Thehuan Hoang
 author_aliases:
   - Shaun Hoang
 
-# Full Name (for SEO)
+# Name used for sorting and matching etc
 first_name: Thehuan
 last_name: Hoang
 
-# Is this the primary user of the site?
-superuser: false
-
 # Role/position
-role: PhD Researcher (External)
+role: PhD Researcher (Ext. Collaborator)
 
 # Short bio (displayed in user profile at end of posts)
 bio: Shaun's research focuses on using open data, simulation, and machine learning to improve transport resilience in fast-growing cities. Obviously, he loves playing Cities Skylines.
@@ -20,8 +17,7 @@ bio: Shaun's research focuses on using open data, simulation, and machine learni
 interests:
   - Transport equity and sustainability
   - Mobility simulation and network resilience
-  - Open data and scalable methods for data-poor contexts
-
+  - Urban analytics in data-poor contexts
 education:
   courses:
     - course: MSc in Urban Spatial Science
@@ -49,12 +45,8 @@ social:
     link: https://github.com/shaunhoang
 
 
-# Highlight the author in author lists? (true/false)
-highlight_name: false
-
-# Organizational groups that you belong to
-user_groups:
-  - Core team
 ---
 
-Thehuan is a Marie Skłodowska-Curie PhD Fellow at the Universitat Oberta de Catalunya, and an external collaborator at the City Modelling Lab. His research focuses on evaluating the resilience of multimodal transport networks, particularly in cities in the Global South, using open data and scalable methods.
+Thehuan is a Marie Skłodowska-Curie PhD Fellow at the Universitat Oberta de Catalunya and a collaborator at the City Modelling Lab. His PhD research measures the resilience of multimodal transport systems, in which open data, network analysis, and agent-based modelling are used to build scalable methods for cities in the Global South. More specifically, he examines how transport performance and equitable access to services deteriorate during shocks to identify priority areas for intervention.
+
+His previous work covers urban mobility, including transport-housing trade-offs in Britain and methods to identify critical road segments in cities with limited traffic data. He holds a Master's degree in Urban Spatial Science from University College London. Previously, he worked in marketing and data analytics consulting.

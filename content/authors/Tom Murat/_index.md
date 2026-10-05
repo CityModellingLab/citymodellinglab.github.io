@@ -4,12 +4,9 @@ title: Tom Murat
 author_aliases:
   - Thomas Murat
 
-# Full Name (for SEO)
+# Name used for sorting and matching etc
 first_name: Tom
 last_name: Murat
-
-# Is this the primary user of the site?
-superuser: false
 
 # Role/position
 role: PhD Researcher
@@ -42,12 +39,6 @@ social:
     icon_pack: fab
     link: https://www.linkedin.com/in/thomas-murat-20a137235/
 
-# Highlight the author in author lists? (true/false)
-highlight_name: false
-
-# Organizational groups that you belong to
-user_groups:
-  - Core team
 ---
 
 Having completed his undergraduate, PGCE and MSc degrees at UCL, Tom is aiming to complete the set with a PhD at CASA. He is currently working on using Agent Based Models to develop effective bus policies. When he is not lost in MatSIM, Tom is usually found dragging reluctant teenagers through their GCSEs and A Levels.

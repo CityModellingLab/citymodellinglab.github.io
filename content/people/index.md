@@ -21,13 +21,6 @@ sections:
   - block: people
     content:
       title: 
-      user_groups:
-          # - Principal Investigators
-          # - Postdoc Researchers
-          # - PhD Researchers
-          # - Research Assistants
-          # - Administration
-          - Core team
       sort_by: Params.last_name
       sort_ascending: true
     design:

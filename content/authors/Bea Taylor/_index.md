@@ -2,12 +2,9 @@
 # Display name
 title: Bea Taylor
 
-# Full Name (for SEO)
+# Name used for sorting and matching etc
 first_name: Beatrice
 last_name: Taylor
-
-# Is this the primary user of the site?
-superuser: false
 
 # Role/position
 role: Research Fellow
@@ -56,12 +53,6 @@ social:
     icon_pack: fas
     link: http://bea-taylor.com/
     
-# Highlight the author in author lists? (true/false)
-highlight_name: false
-
-# Organizational groups that you belong to
-user_groups:
-  - Core team
 ---
 
 I am a postdoc in CASA, working on the Smart Cities theme as part of the AI for Collective Intelligence (AI4CI) hub. My current research focuses on using machine learning methods to analyse how London's built environment is changing. Recently I've been using natural language processing to develop a data-driven characterisation of responses to planning applications. 

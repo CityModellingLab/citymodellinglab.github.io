@@ -2,12 +2,9 @@
 # Display name
 title: Roei Yosifof
 
-# Full Name (for SEO)
+# Name used for sorting and matching etc
 first_name: Roei
 last_name: Yosifof
-
-# Is this the primary user of the site?
-superuser: false
 
 # Role/position
 role: PhD Researcher
@@ -43,12 +40,6 @@ social:
     icon_pack: ai
     link: https://scholar.google.com/citations?user=nIlAvv8AAAAJ&hl=en
 
-# Highlight the author in author lists? (true/false)
-highlight_name: false
-
-# Organizational groups that you belong to
-user_groups:
-  - Core team
 ---
 Roei joined CASA as a first year PhD student in 2025, where his research focuses on possible optimal locations for new towns in the UK.
 

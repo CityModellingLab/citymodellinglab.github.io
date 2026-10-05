@@ -2,12 +2,9 @@
 # Display name
 title: Claude Lynch
 
-# Full Name (for SEO)
+# Name used for sorting and matching etc
 first_name: Claude
 last_name: Lynch
-
-# Is this the primary user of the site?
-superuser: false
 
 # Role/position
 role: PhD Researcher
@@ -46,12 +43,6 @@ social:
     icon_pack: fas
     link: siskiyoucedar.github.io
 
-# Highlight the author in author lists? (true/false)
-highlight_name: false
-
-# Organizational groups that you belong to
-user_groups:
-  - Core team
 ---
 
 After undertaking a master's in Critical Theory, Claude arrived at CASA in 2023 to provoke planners in unexpected ways. As the digital humanist of the team, Claude is frequently cautioning his colleagues on datafication and critical use of GIS. Because he is an 'indie kid' and more or less trapped in 2015, no one has bothered to listen to him yet, but they do let him curate the office playlist.

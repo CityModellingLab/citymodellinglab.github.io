@@ -2,12 +2,9 @@
 # Display name
 title: Esra Suel
 
-# Full Name (for SEO)
+# Name used for sorting and matching etc
 first_name: Esra
 last_name: Suel
-
-# Is this the primary user of the site?
-superuser: false
 
 # Role/position
 role: Associate Professor
@@ -52,12 +49,6 @@ social:
     icon_pack: fab
     link: https://github.com/esrasuel
 
-# Highlight the author in author lists? (true/false)
-highlight_name: false
-
-# Organizational groups that you belong to
-user_groups:
-  - Core team
 ---
 
 Esra is an Associate Professor of Urban Analytics at the University of Zurich and an Associate Professor at UCL's Centre for Advanced Spatial Analysis (CASA). 

@@ -2,12 +2,9 @@
 # Display name
 title: Clara Peiret-Garcia
 
-# Full Name (for SEO)
+# Name used for sorting and matching etc
 first_name: Clara
 last_name: Peiret-Garcia
-
-# Is this the primary user of the site?
-superuser: false
 
 # Role/position
 role: Research Fellow
@@ -55,12 +52,6 @@ social:
     icon_pack: fas
     link: https://cpeiretgarcia.github.io/
 
-# Highlight the author in author lists? (true/false)
-highlight_name: false
-
-# Organizational groups that you belong to
-user_groups:
-  - Core team
 ---
 
 I'm a Research Fellow in Urban Analytics at the Centre for Advanced Spatial Analysis (CASA), working on the TRACK-UK project. My research focuses on understanding the diversity of human mobility, mainly how people navigate urban spaces in fundamentally different ways. Rather than looking at the "average" traveler, I dig into how travel behaviors vary across individuals and populations, exploring the spatial distribution of these distinct patterns. 

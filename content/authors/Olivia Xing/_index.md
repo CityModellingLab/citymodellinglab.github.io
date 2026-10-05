@@ -3,12 +3,9 @@
 title: Olivia Xing
 author_aliases:
 
-# Full Name (for SEO)
+# Name used for sorting and matching etc
 first_name: Olivia  
 last_name: Xing
-
-# Is this the primary user of the site?
-superuser: false
 
 # Role/position
 role: PhD Researcher
@@ -45,12 +42,6 @@ social:
     link: https://github.com/yxing82
 
 
-# Highlight the author in author lists? (true/false)
-highlight_name: false
-
-# Organizational groups that you belong to
-user_groups:
-  - Core team
 ---
 
 Olivia is a PhD student at CASA, continuing her academic journey at UCL after completing a BSc (Hons) in Mathematics and Statistical Science and an MSc in Urban Spatial Science. 

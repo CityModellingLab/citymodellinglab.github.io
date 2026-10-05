@@ -4,12 +4,9 @@ title: Gerry Casey
 author_aliases:
   - Gerard Casey
 
-# Full Name (for SEO)
+# Name used for sorting and matching etc
 first_name: Gerry
 last_name: Casey
-
-# Is this the primary user of the site?
-superuser: false
 
 # Role/position
 role: Principal Research Fellow
@@ -54,12 +51,6 @@ social:
     icon_pack: fab
     link: https://github.com/gac55
 
-# Highlight the author in author lists? (true/false)
-highlight_name: false
-
-# Organizational groups that you belong to
-user_groups:
-  - Core team
 ---
 
 I am a transport modeller and data scientist working at the intersection of research, policy, and real-world decision making. My work focuses on developing and applying large-scale, high-resolution agent-based models to better understand how cities function, how people move, and how policy and infrastructure interventions shape social, environmental, and economic outcomes.

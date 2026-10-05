@@ -2,12 +2,9 @@
 # Display name
 title: Maria Wood
 
-# Full Name (for SEO)
+# Name used for sorting and matching etc
 first_name: Maria
 last_name: Wood
-
-# Is this the primary user of the site?
-superuser: false
 
 # Role/position
 role: PhD Researcher
@@ -46,12 +43,6 @@ social:
     icon_pack: fas
     link: https://mjmwood.github.io/
     
-# Highlight the author in author lists? (true/false)
-highlight_name: false
-
-# Organizational groups that you belong to
-user_groups:
-  - Core team
 ---
 
 Maria joined CASA as a PhD student in Autumn 2023. Her research hopes to make our transport systems fairer and more accessible for everyone. She focuses on understanding the concept "transport flexibility" (or the lack thereof) and how it intersects with socio-demographic or geographic variables. Maria is particularly interested in the issue of car dependence as intersection of climate change and social inequality in the UK. Current projects include using agent-based models (MATSim) to understand individual-level flexibility and exploring the impact of "real" and "perceived" car dependence on long-term future travel plans.

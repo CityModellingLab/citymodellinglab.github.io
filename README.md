@@ -78,8 +78,8 @@ Put this at the top of `index.md` or `index.qmd`. For `.ipynb`, put it in the fi
 title: New Post
 date: 2026-05-02
 authors: # names must match names in content/authors for correct linkage
-- Shaun Hoang
-- Thomas Murat
+- Olivia Xing
+- Bea Taylor
 summary: The summary shown in preview cards
 draft: false
 
@@ -136,11 +136,9 @@ By default, Quarto code is shown as folded code blocks with a `Show code` toggle
 #| echo: false
 ```
 
-## 3. Members And Projects
+## 3. People
 
-Members live under `content/authors/`. Projects live under `content/projects/`.
-
-To add a member:
+Members live under `content/authors/`. To add a member:
 
 1. Copy an existing folder under `content/authors/`.
 2. Rename the folder to the person’s display name, for example `content/authors/Sherlock Holmes/`.
@@ -149,32 +147,9 @@ To add a member:
 
 The author folder name should match the profile `title`. Use `author_aliases` for any other names that may appear in publications or posts, such as formal names, initials, previous names, or spelling variants. Do not create a second author folder for the same person.
 
-Useful member fields include:
+## 4. Projects
 
-```yaml
-title: Sherlock Holmes
-role: Research Fellow
-user_groups:
-- Team
-bio: Short biography for cards and author blurbs.
-interests:
-- Urban modelling
-education:
-  courses:
-  - course: PhD in Cities
-    institution: UCL
-social:
-- icon: envelope
-  link: mailto:name@example.com
-author_aliases:
-- S. Holmes
-- Sherlock H.
-# Use aliases when publications or posts use a different name from the member page.
-```
-
-
-
-To add a project:
+Projects live under `content/projects/`. To add a project:
 
 1. Copy an existing folder under `content/projects/`.
 2. Rename it with a URL-friendly folder name, for example `content/projects/space-syntax-urban-morph/`.
@@ -183,7 +158,7 @@ To add a project:
 
 Posts and publications can link to projects by listing the project folder name in `projects` in the YAML frontmatter.
 
-## 4. Publications
+## 5. Publications
 
 `publications.bib` is the source file for the whole Publications section.
 Do not edit publication page bundles directly; GitHub Actions regenerates them from this file.
@@ -196,9 +171,7 @@ To add or update publications:
 
 GitHub Actions converts and commits each BibTeX entry into a Hugo page bundle under `content/publications/`, and redeploys the page. Deleted entries in `publications.bib` are removed from the website. An empty file removes all generated publication bundles while preserving `content/publications/_index.md`.
 
-
-
-## 5. Publishing Changes
+## 6. Commit and Publish Changes
 
 Before pushing, it is recommended to clean-up Hugo temp elements:
 

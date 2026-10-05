@@ -2,12 +2,9 @@
 # Display name
 title: Adam Dennett
 
-# Full Name (for SEO)
+# Name used for sorting and matching etc
 first_name: Adam
 last_name: Dennett
-
-# Is this the primary user of the site?
-superuser: false
 
 # Role/position
 role: Professor of Urban Analytics
@@ -49,12 +46,6 @@ social:
     icon_pack: ai
     link: https://scholar.google.co.uk/citations?user=P_sHtmkAAAAJ&hl=en
 
-# Highlight the author in author lists? (true/false)
-highlight_name: false
-
-# Organizational groups that you belong to
-user_groups:
-  - Core team
 ---
 
 <!-- Long bio -->
