@@ -5,7 +5,11 @@ type: landing
 sections:
   - block: hero
     content:
+<<<<<<< HEAD
       title: Our Team  
+=======
+      title: The Team  
+>>>>>>> 9d9241cc98a5d4aea7cc44b54c7c3ae48441f3af
       text: Bridge the gap between theory, practice, and policy
     design:
       background:
@@ -41,7 +45,7 @@ sections:
  
   - block: hero
     content:
-      title: Our Philosophy
+      title: The Mission
       text: Tackle climate change and social inequality with data
     design:
       background:
