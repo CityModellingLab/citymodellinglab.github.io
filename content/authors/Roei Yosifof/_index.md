@@ -10,7 +10,7 @@ last_name: Yosifof
 superuser: false
 
 # Role/position
-role: PhD Researcher, UCL
+role: PhD Researcher
 
 # Short bio (displayed in user profile at end of posts)
 bio: Roei is a PhD researcher in CASA currently focusing on locations of new towns, formerly an architect and urban planner.

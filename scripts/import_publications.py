@@ -237,18 +237,18 @@ def render_index(entry_type: str, fields: dict[str, str]) -> str:
 
 def import_publications(bib_path: Path, output_dir: Path) -> int:
     text = bib_path.read_text(encoding="utf-8").strip()
-    if not text:
-        print(f"{bib_path} is empty; no publications imported.")
-        return 0
-
     entries = split_entries(text)
-    if not entries:
-        print(f"{bib_path} contains no BibTeX entries; no publications imported.")
-        return 0
+    if text and not entries:
+        raise ValueError(f"{bib_path} contains no valid BibTeX entries")
+
+    keys = [key for _, key, _ in entries]
+    duplicate_keys = sorted({key for key in keys if keys.count(key) > 1})
+    if duplicate_keys:
+        raise ValueError(f"Duplicate BibTeX keys: {', '.join(duplicate_keys)}")
 
     output_dir.mkdir(parents=True, exist_ok=True)
     known_bundles = existing_bundles(output_dir)
-    current_keys = {key for _, key, _ in entries}
+    current_keys = set(keys)
     for key, bundle in sorted(known_bundles.items()):
         if key not in current_keys:
             shutil.rmtree(bundle)

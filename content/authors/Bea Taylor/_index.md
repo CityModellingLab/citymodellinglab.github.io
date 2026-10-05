@@ -1,6 +1,6 @@
 ---
 # Display name
-title: Beatrice Taylor
+title: Bea Taylor
 
 # Full Name (for SEO)
 first_name: Beatrice
@@ -10,7 +10,7 @@ last_name: Taylor
 superuser: false
 
 # Role/position
-role: Research Fellow, UCL
+role: Research Fellow
 
 # # Organizations/Affiliations
 # organizations:

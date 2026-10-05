@@ -1,18 +1,18 @@
 ---
 # Display name
-title: Shaun Hoang
+title: Thehuan Hoang
 author_aliases:
-  - Thehuan Hoang
+  - Shaun Hoang
 
 # Full Name (for SEO)
-first_name: Shaun
+first_name: Thehuan
 last_name: Hoang
 
 # Is this the primary user of the site?
 superuser: false
 
 # Role/position
-role: Predoc Researcher, UZH & UCL
+role: PhD Researcher (Affiliated)
 
 # Short bio (displayed in user profile at end of posts)
 bio: Shaun's research focuses on using open data, simulation, and machine learning to improve transport resilience in fast-growing cities. Obviously, he loves playing Cities Skylines.
@@ -40,10 +40,7 @@ education:
 social:
   - icon: envelope
     icon_pack: fas
-    link: 'mailto:thehuan.hoang@geo.uzh.ch'
-  - icon: link
-    icon_pack: fas
-    link: https://www.geo.uzh.ch/en/department/Staff/hoangshaun
+    link: 'mailto:thoang@uoc.edu'
   - icon: linkedin
     icon_pack: fab
     link: https://www.linkedin.com/in/shaunhoang/
@@ -60,4 +57,4 @@ user_groups:
   - Core team
 ---
 
-Shaun Hoang (The-Huan)'s research focuses on improving equitable and sustainable access and transport resilience in fast-growing cities, particularly in the Global South. He is interested in combining complexity science and spatial data analysis to study first/last-mile access and transport resilience, using open geodata, simulation, and machine learning methods.
+Thehuan's research focuses on improving equitable and sustainable access and transport resilience in fast-growing cities, particularly in the Global South. He is interested in combining complexity science and spatial data analysis to study first/last-mile access and transport resilience, using open geodata, simulation, and machine learning methods.

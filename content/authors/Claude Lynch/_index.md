@@ -10,7 +10,7 @@ last_name: Lynch
 superuser: false
 
 # Role/position
-role: PhD Researcher, UCL
+role: PhD Researcher
 
 # Short bio (displayed in user profile at end of posts)
 bio: Claude is the only PhD researcher at the City Modelling Lab who has walked the London Loop in full. 

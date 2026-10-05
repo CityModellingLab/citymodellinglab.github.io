@@ -186,6 +186,7 @@ Posts and publications can link to projects by listing the project folder name i
 ## 4. Publications
 
 `publications.bib` is the source file for the whole Publications section.
+Do not edit publication page bundles directly; GitHub Actions regenerates them from this file.
 
 To add or update publications:
 
@@ -193,7 +194,7 @@ To add or update publications:
 2. Make sure CML author names match folders under `content/authors/`, or add `author_aliases` to the relevant member page.
 3. Commit and push `publications.bib`.
 
-GitHub Actions converts and commits each BibTeX entry into a Hugo page bundle under `content/publications/`, and redeploys the page. Deleted entries in `publications.bib` will also be removed from the website.
+GitHub Actions converts and commits each BibTeX entry into a Hugo page bundle under `content/publications/`, and redeploys the page. Deleted entries in `publications.bib` are removed from the website. An empty file removes all generated publication bundles while preserving `content/publications/_index.md`.
 
 
 

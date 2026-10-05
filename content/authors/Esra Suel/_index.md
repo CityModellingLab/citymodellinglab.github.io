@@ -10,7 +10,7 @@ last_name: Suel
 superuser: false
 
 # Role/position
-role: Associate Professor, UZH & UCL
+role: Associate Professor
 
 # Short bio (displayed in user profile at end of posts)
 bio: Esra is an Associate Professor of Urban Analytics at the University of Zurich and UCL CASA. Her research uses computational methods to study mobility, housing, demographic change, and energy transitions in cities, focusing on inequalities. 

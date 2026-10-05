@@ -5,7 +5,7 @@ sections:
   - block: hero
     content:
       title: Publications
-      text: What we've written and presented...
+      text: What we've published or presented...
     design:
       background:
         image: 

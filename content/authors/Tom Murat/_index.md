@@ -12,7 +12,7 @@ last_name: Murat
 superuser: false
 
 # Role/position
-role: PhD Researcher, UCL
+role: PhD Researcher
 
 # Short bio (displayed in user profile at end of posts)
 bio: Tom is currently working on using Agent Based Models to develop effective bus policies. When he is not lost in MatSIM, Tom is usually found dragging reluctant teenagers through their GCSEs and A Levels.

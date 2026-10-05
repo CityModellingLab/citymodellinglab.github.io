@@ -12,7 +12,7 @@ last_name: Casey
 superuser: false
 
 # Role/position
-role: Principal Research Fellow, UCL & Associate, Arup
+role: Principal Research Fellow
 
 # Short bio (displayed in user profile at end of posts)
 bio: Transport modeller and data scientist building city-scale simulations to help governments and cities make better decisions on transport, climate, and equity.

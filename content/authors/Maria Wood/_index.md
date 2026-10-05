@@ -10,7 +10,7 @@ last_name: Wood
 superuser: false
 
 # Role/position
-role: PhD Researcher, UCL
+role: PhD Researcher
 
 # Short bio (displayed in user profile at end of posts)
 bio: Maria is a PhD researcher at CASA who's work focuses on car dependence, transport equity, and flexibility in the context of rapid decarbonisation. 

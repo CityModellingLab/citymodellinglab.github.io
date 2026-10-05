@@ -5,7 +5,7 @@ sections:
   - block: hero
     content:
       title: Projects
-      text: What we're working on...
+      text: What we're focused on...
     design:
       background:
         image: 

@@ -1,11 +1,11 @@
 ---
-title: About Us
+title: People
 type: landing
 
 sections:
   - block: hero
     content:
-      title: Meet the Team  
+      title: Our Team  
       text: Bridge the gap between theory, practice, and policy
     design:
       background:

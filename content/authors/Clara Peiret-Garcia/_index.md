@@ -10,7 +10,7 @@ last_name: Peiret-Garcia
 superuser: false
 
 # Role/position
-role: Research Fellow, UCL
+role: Research Fellow
 
 # Short bio (displayed in user profile at end of posts)
 bio: Clara's research focuses in identifying spatial inequalities in transport, and developing and applying new methods based using survey data. She is very partial to pretty maps and Bruce Springsteen.
